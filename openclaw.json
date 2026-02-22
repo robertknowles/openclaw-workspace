@@ -1,0 +1,161 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.19-2",
+    "lastTouchedAt": "2026-02-21T05:39:29.694Z"
+  },
+  "env": {
+    "BRAVE_API_KEY": "BSAecEV8fOYvtpOZFIqJTpvYoUgrNiv",
+    "SUPERMEMORY_API_KEY": "sm_qqDFbbsoAhtZ38N6LN8ukX_zAkYtvqurZfOdAylhpNpBPUoKXyhcHopIpUOvxaflgoDAeRTYfrVMLOIpNglRVaS"
+  },
+  "wizard": {
+    "lastRunAt": "2026-02-21T04:46:56.634Z",
+    "lastRunVersion": "2026.2.19-2",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "browser": {
+    "enabled": true,
+    "headless": false,
+    "noSandbox": false,
+    "defaultProfile": "openclaw"
+  },
+  "auth": {
+    "profiles": {
+      "openrouter:default": {
+        "provider": "openrouter",
+        "mode": "api_key"
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "openrouter/anthropic/claude-sonnet-4.6",
+        "fallbacks": [
+          "openrouter/openai/minimax-m2.5"
+        ]
+      },
+      "models": {
+        "openrouter/openai/minimax-m2.5": {
+          "alias": "minimax-2.5"
+        },
+        "openrouter/anthropic/claude-sonnet-4.6": {
+          "alias": "sonnet-4.6"
+        }
+      },
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "subagents": {
+        "maxSpawnDepth": 1,
+        "maxChildrenPerAgent": 5,
+        "model": "openrouter/openai/minimax-m2.5"
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "subagents": {
+          "allowAgents": [
+            "scout",
+            "closer",
+            "hunter"
+          ]
+        },
+        "tools": {
+          "allow": [
+            "sessions_spawn",
+            "sessions_send",
+            "sessions_history",
+            "sessions_list",
+            "agents_list"
+          ]
+        }
+      },
+      {
+        "id": "scout",
+        "name": "scout",
+        "workspace": "/Users/robertknowles/.openclaw/workspace-scout",
+        "agentDir": "/Users/robertknowles/.openclaw/agents/scout/agent"
+      },
+      {
+        "id": "closer",
+        "name": "closer",
+        "workspace": "/Users/robertknowles/.openclaw/workspace-closer",
+        "agentDir": "/Users/robertknowles/.openclaw/agents/closer/agent"
+      },
+      {
+        "id": "hunter",
+        "name": "hunter",
+        "workspace": "/Users/robertknowles/.openclaw/workspace-hunter",
+        "agentDir": "/Users/robertknowles/.openclaw/agents/hunter/agent"
+      }
+    ]
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true
+  },
+  "channels": {
+    "discord": {
+      "enabled": true,
+      "token": "MTQ3MjQzMjUxMjU5OTg1NTI5NQ.GQtqr3.-AjIKX5UHuIUOsSRP1q4aPSp1d8RDLON0R5YHk",
+      "groupPolicy": "allowlist",
+      "guilds": {}
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "ea38dff4f51e4d525415aa25c2061247465005dec44a7156"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    }
+  },
+  "memory": {
+    "backend": "builtin",
+    "qmd": {
+      "includeDefaultMemory": true,
+      "sessions": {
+        "enabled": true
+      },
+      "update": {
+        "interval": "6h"
+      }
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    }
+  },
+  "plugins": {
+    "entries": {
+      "discord": {
+        "enabled": true
+      }
+    }
+  },
+  "tools": {
+    "elevated": {
+      "allowFrom": {
+        "webchat": [
+          "*"
+        ]
+      },
+      "enabled": true
+    },
+    "sessions": {
+      "visibility": "all"
+    },
+    "agentToAgent": {
+      "enabled": true
+    }
+  }
+}
