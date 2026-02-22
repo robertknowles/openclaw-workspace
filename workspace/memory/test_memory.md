@@ -1,0 +1,1 @@
+This is a test memory file to verify long-term recall functionality within the current setup.
