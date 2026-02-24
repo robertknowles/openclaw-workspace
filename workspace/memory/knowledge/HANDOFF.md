@@ -1,63 +1,77 @@
 # HANDOFF.md — Session State Save
-*Saved: Feb 2026 — post research write-up*
+*Saved: Feb 2026 — Research phase COMPLETE*
 
 ---
 
-## What Was Completed This Session
+## Status: Research Phase Done ✅
 
-### 1. InvestorKit FAQ + Framework data written to file ✅
-- `memory/knowledge/competitors/05-investorkit.md` — updated with:
-  - Full FAQ intel (entry requirements, min prices, timeline, what they don't buy)
-  - Three-stage framework (Foundation → Momentum → Passive) with case study quotes
-  - Michael + Raj & Sowji case studies added
-  - Portfolio Wealth Accelerator clarified: content/campaign wrapper for Gameplans, NOT a standalone tool (page now 404)
-  - Annual reviews confirmed as baseline (not monthly)
-
-### 2. School of Property curriculum confirmed ✅
-- `memory/knowledge/property-investment/04b-aps-deep-dive.md` — already had this from a prior session write
-  - 11 modules (NOT 12 — outdated snippet)
-  - 70+ lessons, 50+ hours of video
-  - 9 of 11 module names confirmed from public site
-  - Trident Formula = APS's core three-pronged framework (specific prongs not yet publicly confirmed)
-
-### 3. Pure InvestorKit Deep Dive written ✅
-- `memory/knowledge/property-investment/07-investorkit-pure-deep-dive.md` — NEW FILE
-  - Full business model, revenue trajectory, team structure
-  - Complete client journey (entry → assessment → brief → sourcing → ongoing)
-  - Three-stage framework (Foundation → Momentum → Passive) with Acquire → Optimise → Consolidate overlay
-  - All 5 major case studies with numbers
-  - Portfolio Mapping Session breakdown
-  - Emotional arc of IK clients
-  - IK's competitive moat
+All research has been consolidated. The master document is:
+**`memory/knowledge/MASTER-RESEARCH-SUMMARY.md`** — start here next session.
 
 ---
 
-## What's Still Pending
+## What Was Completed (Full Research Phase)
 
-### Priority 1 — Property Nerds episode archive
-- NOT yet fetched in full
-- IK podcasts page: `investorkit.com.au/podcasts/` — not yet scraped
-- Known hosts: Arjun Paliwal, Adrian Lee, Jack Fouracre
-- Goal: list episode topics → what strategic questions IK addresses in content
-
-### Priority 2 — APS Trident Formula specifics
-- "Three-pronged approach" — exact three prongs not publicly confirmed
-- Candidate: Cash Flow / Capital Growth / Structure (or Yield / Growth / Equity)
-- Possible source: APS podcast deep cuts, or schoolofproperty.com.au sales page copy
-
-### Priority 3 — Rob's next direction
-- Does Rob want to go back to PropPath feature map now that IK/APS research is solid?
-- Or continue competitor research (who's next — Cohen Handler? Property Maverick? Metropole?)
-- Or shift to PropPath go-to-market / sales strategy?
+### Files Written (All Committed to Git)
+| File | Contents |
+|------|----------|
+| `memory/knowledge/MASTER-RESEARCH-SUMMARY.md` | ⭐ Full consolidated research — 10 sections, read this first |
+| `memory/knowledge/proppath-feature-map.md` | Full PropPath feature map, Tier 1–4, prioritised |
+| `memory/knowledge/proppath-model-statement.md` | Core product calibration — incremental vs simulation-first |
+| `memory/knowledge/competitors/05-investorkit.md` | InvestorKit full profile — business, team, FAQ, framework, cases |
+| `memory/knowledge/property-investment/07-investorkit-pure-deep-dive.md` | IK pure deep dive — no PropPath lens |
+| `memory/knowledge/property-investment/06-investorkit-vs-gameplans-model.md` | IK vs Gameplans model comparison |
+| `memory/knowledge/property-investment/04b-aps-deep-dive.md` | APS + School of Property — Trident Formula, curriculum |
+| `memory/knowledge/property-investment/08-property-nerds-episodes.md` | IK podcast episode archive + client pain point map |
 
 ---
 
-## Files Written This Session
-- `memory/knowledge/competitors/05-investorkit.md` ✅ (updated)
-- `memory/knowledge/property-investment/07-investorkit-pure-deep-dive.md` ✅ (new)
-- `memory/knowledge/property-investment/04b-aps-deep-dive.md` ✅ (already up to date from prior session)
-- `memory/knowledge/HANDOFF.md` (this file) ✅
+## Key Findings (TL;DR)
 
-## Files Pending
-- InvestorKit podcast episode archive → new file or append to 05-investorkit.md
-- APS Trident Formula specifics → append to 04b-aps-deep-dive.md
+### The Problem
+BAs use Gameplans in live sessions to show portfolio plans. After the session, the plan disappears. Clients have no ongoing visibility. No living tool exists that keeps the plan alive between purchases.
+
+### The Product
+**PropPath = living portfolio roadmap.** BA builds it, client views it ongoing. Updates with reality, not just projections. Alerts both parties when it's time to buy again.
+
+### The Model
+PropPath is **incremental, not simulation-first** (aligned to InvestorKit, not Gameplans).
+
+### The Target Customer
+**InvestorKit is the ideal first customer.** They already believe in portfolio planning, use Gameplans, are scaling fast ($15M → $25M), and have the exact pain PropPath solves.
+
+### The 6 MVP Features
+1. Portfolio Roadmap Builder
+2. Goal Reverse-Engineering Engine
+3. Current Portfolio Dashboard
+4. Equity Trigger Alerts ⭐ (most valuable)
+5. Milestone Tracker
+6. Dual BA/Client Portal
+
+### The Positioning
+- Don't compete WITH Gameplans (different job). Compete for the GAP after Gameplans.
+- Headline: **"Your portfolio plan, alive."**
+- Problem: "BAs close clients with a plan. After the session, it disappears. PropPath keeps it alive."
+
+---
+
+## Next Actions (Pick Up Here Next Session)
+
+### Option A — Product Definition
+Define the PropPath MVP in detail: user flows, data model, key screens. Start turning the feature map into a spec.
+
+### Option B — Knock Off Open Questions
+- What does Gameplans actually look like? (get access or screenshots)
+- What are the other top BAs using? (Metropole, Empower Wealth, Cohen Handler)
+- What is PropPath's pricing model?
+
+### Option C — Go-To-Market
+- Who are the 10 best BAs to pitch first?
+- What does the PropPath demo/sales motion look like?
+- Draft the IK outreach pitch
+
+---
+
+## Git Status
+All files committed to main. No pending changes.
+Last commit: "MASTER-RESEARCH-SUMMARY.md — research phase complete"
