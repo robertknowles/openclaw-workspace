@@ -123,7 +123,97 @@ This is a *lifecycle framework* — not just buy and hold.
 
 ---
 
+## InvestorKit FAQ — Key Intel (from live FAQ page)
+
+### Entry & Eligibility
+- **Minimum capital:** ~$100k equity or usable funds
+- **Residential minimum:** $525k purchase price
+- **SMSF minimum:** $575k purchase price
+- **Commercial:** $2M–$10M+
+- **Timeline to first purchase:** 1–4 months (depends on how specific client is with brief)
+- **SMSF purchases:** Yes, they do it
+- **Trust purchases:** Yes, they do it
+
+### What They DON'T Buy
+- New builds
+- NDIS properties
+- Units/apartments
+- Knockdown rebuilds
+- Major renovation properties
+
+### Active Markets
+- Buying across 9–15 markets at any given time
+- National, borderless approach
+
+### Client Lifecycle (Post-Purchase)
+- Regular check-ins
+- **Annual reviews with Portfolio Strategist** (FAQ confirmed — NOT monthly as job posting implied; annual is the baseline, monthly may be for active clients)
+- "Ongoing support" is part of the service package
+
+### Full Service Inclusions
+1. Portfolio Assessment
+2. Property Brief Creation
+3. Market Selection
+4. Property Sourcing
+5. Ongoing Support
+6. Post-Purchase Reviews
+
+---
+
+## The Three-Stage Portfolio Framework (Confirmed from Raj & Sowji case study)
+
+InvestorKit explicitly uses three stages with clients:
+
+### Stage 1: Foundation
+- Major markets, larger price points
+- Blue chip capital city assets
+- Focus: Capital growth, strong fundamentals
+- Goal: Build equity base
+
+### Stage 2: Momentum
+- Affordable prices, spread across the nation
+- Any city — data-driven location selection
+- Focus: Spread exposure, lower entry points, leverage multiple markets
+- Goal: Accelerate portfolio growth using Foundation equity
+
+### Stage 3: Passive
+- Commercial properties and unit blocks
+- Focus: Cash flow ("forward moving assets")
+- Key quote: *"Assets where you don't take one step back, two steps forward like in residential. You simply take a step forward as cash flow is present from day one and growth continues to accumulate in the remainder of the portfolio."*
+- Goal: Transition to income, financial independence
+
+### How This Maps to "Acquire → Optimise → Consolidate"
+- Foundation + Momentum = Acquire phase
+- Optimise = active management between buys (equity review, yield check)
+- Passive = Consolidate (crystallise income, reduce growth risk)
+
+---
+
+## Portfolio Wealth Accelerator — Clarified
+
+**Previous assumption:** PWA was a standalone software tool.
+**Confirmed reality:** PWA is a content/campaign framework, NOT a software product.
+
+- URL: `investorkit.com.au/campaign/ultimate-property-toolkit/portfolio-wealth-accelerator/`
+- That page now **redirects to homepage** — it's gone/archived
+- Captured snippet: *"acquire properties in a strategic manner that may give you a security net and potentially help you jump from one property to another fast and compounds with time, increasing passive income"*
+- This was a lead gen / content campaign, not a tool with a login
+
+**What does the "mapping technology" quote refer to then?**
+Almost certainly Gameplans — the visual modelling tool IK uses internally in Portfolio Mapping Sessions. The "Portfolio Wealth Accelerator" was the campaign name wrapping their Gameplans-powered sessions.
+
+---
+
 ## Client Case Studies (Revealing the Journey)
+
+### Michael — 13 properties, $16.54M, $2.8M equity in 5 years
+- Bought across 5 states
+- Journey: foundational residential → momentum regional → commercial
+- Clearest example of the three-stage framework in action at scale
+
+### Raj & Sowji — 8 properties, $9M+, 4 states
+- Explicitly went through Foundation → Momentum → now transitioning to commercial Passive assets
+- The case study that confirmed IK's three-stage language
 
 ### Nafiz — 5 properties, $2.86M, $900k+ equity over 5 years
 - Started: 26-year-old young professional living at home

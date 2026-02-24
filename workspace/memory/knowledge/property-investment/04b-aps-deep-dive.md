@@ -7,14 +7,37 @@
 
 APS's education arm — a paid course/program separate from the BA service.
 
+**Platform:** Kajabi (schoolofproperty.mykajabi.com)
+
+### Confirmed Course Specs (from Kajabi sales page — Feb 2026)
+- **11 modules** (NOT 12 — earlier "12 modules" snippet appears outdated)
+- **70+ lessons**
+- **50+ hours of video content**
+- Lifetime access (including all new content added in future)
+- Easy-to-navigate course portal
+- Exclusive access to resource libraries and expert panel
+- Step-by-step approach for beginners to experts
+
+**Note:** A prior search snippet said "12 modules with sharp and practical videos" — this appears to be from an older version or cached page. The live Kajabi page as of Feb 2026 says 11 modules, 70+ lessons, 50+ hours. The "98+ lessons" figure from a prior session is unverified and likely outdated.
+
+### Curriculum Outline (from schoolofproperty.com.au/what-we-do)
+Sammy Gordon's confirmed modules — exact lesson counts unknown, but topics:
+
+1. **Property Investing Fundamentals** — foundational knowledge base, packed with insights
+2. **The Trident Formula** — Sam's three-pronged approach to building a strategic portfolio (this is APS's core framework)
+3. **Advanced Accounting and Structuring** — from Sam's personal accountant; includes special offer; bullet-proof portfolio structuring
+4. **Bonus Podcast Episodes** — behind-the-curtain Scouting Australia Podcast episodes (exclusive to SoP members)
+5. **Advanced Investor Strategies & Concepts** — Sam + expert brokers unpack strategies he's developed over years
+6. **Financial Masterclass for Investors** — steps Sam used to build a 20-property portfolio making $100k p.a.
+7. **Real Deals** — Sam dissects deals from APS vault + his own portfolio
+8. **Scaling Your Portfolio** — how Sam scaled to 20+ properties on average Australian income
+9. **'How To' Series** — straight strategy sessions: how to build a property portfolio
+
+*Note: 9 topics confirmed from the website. Additional modules/lessons not yet captured (11 total on Kajabi).*
+
 **Positioning:** "The ultimate roadmap to property investing success... No fluff, no un-tested theory — just the exact blueprint that has helped thousands of everyday Australians build life-changing wealth."
 
-**What it covers (from podcast description):**
-- Fundamentals of property investing
-- Proven portfolio blueprint
-- Advanced investor strategies
-- Tools to futureproof success
-- Curriculum for both beginners and experts
+**Key framework:** The Trident Formula — Sam's "three pronged approach" (specific three prongs not yet confirmed — likely relates to yield, growth, and equity or cash flow, capital growth, and structure)
 
 **Real outcomes from School of Property clients:**
 - Bailey: started with $60k equity, built 3-property portfolio in 12 months → $480k equity created
