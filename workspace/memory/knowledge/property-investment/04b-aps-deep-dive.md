@@ -37,7 +37,22 @@ Sammy Gordon's confirmed modules — exact lesson counts unknown, but topics:
 
 **Positioning:** "The ultimate roadmap to property investing success... No fluff, no un-tested theory — just the exact blueprint that has helped thousands of everyday Australians build life-changing wealth."
 
-**Key framework:** The Trident Formula — Sam's "three pronged approach" (specific three prongs not yet confirmed — likely relates to yield, growth, and equity or cash flow, capital growth, and structure)
+**Key framework:** The Trident Formula — Sam's "three pronged approach"
+
+### Trident Formula — Confirmed Components (Feb 2026)
+
+The exact "Trident Formula" branding is only used internally/in the School of Property (not searchable publicly). However, Sam Gordon described his strategy explicitly in a 2019 Property Investory podcast interview:
+
+> *"Buying in below market with strong cash flows in solid growth markets with value add potential."*
+
+This maps directly to three prongs:
+1. **Below market value** (buy at a discount — manufactured equity from day one)
+2. **Strong cash flow** (yield sufficient to hold without cash drain)
+3. **Capital growth + value add potential** (suburb fundamentals + ability to improve)
+
+This is the APS "bread and butter" deal type — the three-legged stool that all APS property sourcing is filtered through. All three must be present. If only two prongs are met, it doesn't qualify.
+
+**Why this matters for PropPath:** The Trident Formula is a deal-qualification framework, not a portfolio-stage framework. It answers "is this the right property?" — not "what stage am I at?" PropPath models the stages (Foundation/Momentum/Passive for IK; equivalent for APS clients), while the Trident Formula is the filter applied at each stage when sourcing.
 
 **Real outcomes from School of Property clients:**
 - Bailey: started with $60k equity, built 3-property portfolio in 12 months → $480k equity created
