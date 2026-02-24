@@ -1,207 +1,219 @@
-# InvestorKit — Pure Deep Dive (No PropPath Lens)
-*Research: Feb 2026. Source: live website, FAQ, case studies, job posting, media articles.*
-*Purpose: Understand IK as a business — how it works, what clients experience, what frameworks drive it.*
+# InvestorKit — Pure Deep Dive
+*No PropPath lens. Just IK as a business, a service, and a client experience.*
+*Research: Feb 2026*
 
 ---
 
-## The Business
+## What InvestorKit Actually Is
 
-**InvestorKit** is an investment-focused buyers' agency founded in 2018 by Arjun Paliwal.
+InvestorKit is a **national buyers agency** that specialises in investment property. Not a tool. Not an education platform. A team of humans who find, evaluate, and negotiate property purchases on behalf of clients building long-term portfolios.
 
-- **Revenue trajectory:** $3.6M (22-23) → $7.6M (23-24) → $15M (24-25) → forecast $23–25M (25-26)
-- **Staff:** 80+ full-time (InvestorKit Group)
-- **Clients:** 1,200+ families
-- **Awards:** REB Buyers Agency of the Year 2023 AND 2024 — only agency to win back-to-back
-- **Media:** Forbes Australia Aug 2025; 1,000+ media articles; The Property Nerds podcast
-
-Arjun's origin: Left CBA at 26 with 9 investment properties. Explicitly modelled IK on CBA's private banking team structure — not a boutique operator, a scaled specialist firm.
+They've layered onto that core service:
+- A proprietary research framework (data-first suburb selection)
+- A structured client lifecycle (Portfolio Strategist model)
+- A podcast content brand (The Property Nerds)
+- A visual portfolio modelling layer (Gameplans, branded as Portfolio Wealth Accelerator)
 
 ---
 
-## What InvestorKit Actually Does
+## Business Model
 
-IK is a **full-service investment buyers' agency**. Clients pay for:
-
-1. **Portfolio Assessment** — where you are now
-2. **Property Brief Creation** — what you should buy and why
-3. **Market Selection** — which cities/suburbs (data-driven)
-4. **Property Sourcing** — finding, vetting, negotiating
-5. **Ongoing Support** — check-ins, reviews, next cycle prep
-6. **Post-Purchase Reviews** — annual reviews with Portfolio Strategist
-
-They **do not** manage properties after purchase (not a property manager). They source, advise, and plan — then hand back to the client + their team (broker, accountant, PM).
+- **Revenue:** ~$15M in 2024-25 (up from $7.6M prior year, $3.6M the year before — near doubling YoY)
+- **Forecast:** $23–25M in 2025-26
+- **Clients:** 1,200+ families served
+- **Staff:** 80+ full-time across InvestorKit Group
+- **Founded:** 2018 by Arjun Paliwal (ex-CBA, left at 26 with 9 properties)
+- **Recognition:** REB Buyers Agency of the Year — 2023 AND 2024 (only agency to win consecutively)
+- **Reviews:** 700+ five-star reviews
+- **Media:** Forbes Australia Aug 2025, 1000+ media articles total
 
 ---
 
-## The Client Experience — End to End
+## How They Make Money
 
-### Entry
-- Min ~$100k usable equity or funds
-- Min residential purchase: $525k
-- Min SMSF purchase: $575k
-- Timeline to first purchase: 1–4 months (tighter brief = faster)
-- They do SMSF and Trust purchases — sophisticated client base
+IK charges a **buyer's agent fee** per property purchase — typically a flat fee or % of purchase price. No public pricing on their site (leads must book a call). Based on industry norms, likely $8k–$15k per property for residential.
 
-### What They WON'T Buy (Hard Rules)
-- New builds
-- NDIS properties
-- Units or apartments
-- Knockdown rebuilds
-- Major renovation properties
-*This is a strict "established residential → commercial" bias. They are growth-first.*
+Their revenue doubling YoY suggests either:
+- More clients (volume), or
+- Expansion into higher-value commercial ($2M–$10M+) where fees scale accordingly
+- Likely both
 
-### Active Markets
-- 9–15 markets at any given time
-- National, borderless — no geographic emotional bias
-- 70% of deals sourced **offline** (not on listing portals)
-- They reject 92% of properties reviewed — 8% pass their 20-point due diligence
-
-### The Portfolio Mapping Session
-The core product event. Every new client goes through this first.
-
-What happens:
-1. Understand financial goals, investment experience, risk profile
-2. Build a "tailored brief" — target yield, capital growth, or cash flow balance
-3. **Generate a portfolio plan** — forward-looking roadmap showing long-term impact
-4. Collaborate with broker to validate borrowing capacity
-5. Produce a "buyer brief" that drives acquisition
-
-Output: A visual, modelled roadmap that projects:
-- Portfolio value trajectory
-- Passive income at target date (e.g. retirement)
-- Inflation-adjusted projections
-- Multi-property, multi-state view
-
-Client quote: *"Using their portfolio plan with InvestorKit, they can see the long term impact. The properties alone are on track to support an inflation adjusted passive income target above $100,000 per year in retirement, before including super."*
-
-### Ongoing Client Relationship
-- **Annual reviews** with Portfolio Strategist (FAQ-confirmed baseline)
-- Monthly check-ins possible for active acquisition clients (from job posting — not confirmed as standard)
-- The Portfolio Strategist manages the client's journey between purchases
-- CRM-tracked: tasks, notes, stage, upsell triggers
+The commercial tier is explicitly part of their offer — minimum $2M–$10M+ purchase price.
 
 ---
 
 ## The Team Structure (Private Banking Model)
 
-Arjun deliberately replicated CBA's private banking structure:
+Arjun deliberately modelled IK on how CBA's private banking team worked — one point of contact for each client, but the client accesses a team of specialists behind that contact.
 
 | Role | Function |
 |------|----------|
-| **Portfolio Strategist** | Strategy sessions, buyer briefs, client lifecycle management, annual reviews |
-| **Research Team** | Suburb selection, market data, macro/micro analysis |
-| **Acquisitions Team** | Property sourcing, negotiations, off-market network |
-| **Client Success / Onboarding** | Post-purchase support, check-ins, handover |
+| **Portfolio Strategist** | Client-facing relationship owner. Runs portfolio mapping sessions, monthly strategy reviews, buyer briefs, manages lifecycle |
+| **Research Team** | Suburb selection, market data, proprietary modelling. Identifies markets BEFORE the curve |
+| **Acquisitions Team** | Sourcing properties, negotiating, off-market deals (70% of deals are off-market) |
+| **Client Success / Onboarding** | Post-purchase support, annual reviews |
 
-Each client has **one point of contact** (Portfolio Strategist) but accesses a full team behind them.
+The **Portfolio Strategist** is the highest-leverage role — they own the client relationship start to finish, from initial strategy session through to repeat purchases.
 
 ---
 
-## The Investment Framework
+## What Clients Actually Go Through
 
-### Three-Stage Portfolio Framework
+### Entry Requirements
+- Minimum usable equity or funds: ~$100k
+- Minimum residential purchase: $525k
+- Minimum SMSF purchase: $575k
+- Minimum commercial: $2M–$10M+
+- Timeline from brief to purchase: **1–4 months** (depends on how specific client is with their brief)
+- SMSF purchases: Yes
+- Trust purchases: Yes
 
-IK explicitly moves clients through three stages:
+### What They DON'T Buy (Hard Rules)
+- New builds
+- NDIS properties
+- Units / apartments
+- Knockdown rebuilds
+- Major renovation properties
 
-**Stage 1: Foundation**
-- Major markets, larger price points
+Only 8% of properties reviewed pass IK's due diligence.
+
+### The Client Journey (Step by Step)
+
+**1. Portfolio Assessment**
+Initial session — understand the client's goals, financial position, investment experience, risk profile. This is where the Portfolio Strategist maps the current state vs target state.
+
+**2. Property Brief Creation**
+A written "buyer brief" — targets specific yield, capital growth, or cash flow balance. Validated with the client's broker for borrowing capacity. This is not a standard brief — it's tailored to the specific stage of the three-stage framework (see below).
+
+**3. Market Selection**
+Research team identifies which of the 9–15 active markets fits the brief. Macro (population, infrastructure, employment) + micro (suburb vacancy, comparable sales, rental demand).
+
+**4. Property Sourcing**
+Acquisitions team works the market — 70% off-market. Rejects 92% reviewed. Negotiates.
+
+**5. Ongoing Support**
+Post-purchase check-ins. Annual review with Portfolio Strategist. Equity assessment. Prep for next purchase.
+
+**6. Post-Purchase Reviews**
+Annual (confirmed in FAQ). Some clients get more frequent touchpoints during active growth phases.
+
+---
+
+## The Three-Stage Portfolio Framework
+
+IK uses explicit stage language with clients. Confirmed from Raj & Sowji case study and Michael case study.
+
+### Stage 1: Foundation
 - Blue chip capital city assets
-- Goal: Build a strong equity base in proven markets
-- Example: Brisbane house, Sydney fringe, high-growth corridor
+- Larger price points, major markets
+- Focus: capital growth, strong fundamentals
+- Purpose: build the equity base that funds the next stage
 
-**Stage 2: Momentum**
-- Affordable prices, spread nationally
-- Data-driven city/suburb selection — any market if the data supports it
-- Goal: Use Foundation equity to acquire more assets, accelerate growth
-- Example: Regional cities, emerging markets, high-yield blends
+### Stage 2: Momentum
+- Affordable entry points, spread nationally
+- Data-driven location selection — any city, not just capitals
+- Focus: use Foundation equity to acquire more at lower price points
+- Purpose: accelerate portfolio size and diversification
 
-**Stage 3: Passive**
+### Stage 3: Passive
 - Commercial properties and unit blocks
-- Cash flow-positive from day one
-- Quote: *"Assets where you don't take one step back, two steps forward like in residential. You simply take a step forward as cash flow is present from day one and growth continues to accumulate in the remainder of the portfolio."*
-- Goal: Transition from growth to income — financial independence
+- Cash-flow positive from day one
+- Key insight: *"Assets where you don't take one step back, two steps forward like in residential. You simply take a step forward as cash flow is present from day one and growth continues to accumulate."*
+- Purpose: transition from growth to income — financial independence
 
-### Acquire → Optimise → Consolidate (Arjun's Lifecycle Framework)
-From The Property Nerds podcast (confirmed June 2024 SPI article):
+### The Overarching Cycle: Acquire → Optimise → Consolidate
+From The Property Nerds podcast (Arjun, June 2024):
+- **Acquire** — find and buy the right property in the right market (at the right stage)
+- **Optimise** — manage, refinance, maximise equity and yield between purchases
+- **Consolidate** — review portfolio, decide what to hold/sell, prepare for next acquisition or stage transition
 
-1. **Acquire** — buy the right property in the right market at the right time
-2. **Optimise** — manage it, maximise yield, position equity for next move
-3. **Consolidate** — review the whole portfolio, decide what to hold/sell, prepare next acquisition
-
-This maps onto the Three Stages: Foundation + Momentum = Acquire cycle. Passive = Consolidate destination.
-
-### Market Selection Philosophy
-- Macro indicators: population growth, infrastructure, employment, supply/demand balance
-- Micro: suburb vacancy rates, rental demand, comparable sales
-- Counter-cyclical bias — buy ahead of the herd, not with it
-- Hard data-first, emotion-last
+This is the macro lifecycle. The three stages (Foundation → Momentum → Passive) are WHERE you are. Acquire → Optimise → Consolidate is WHAT you do at each stage, repeatedly.
 
 ---
 
-## Client Case Studies — What the Journey Actually Looks Like
+## Client Case Studies
 
-### Michael — 13 properties, $16.54M, $2.8M equity, 5 years, 5 states
-The clearest example of the full three-stage journey at scale:
-- Foundation → Momentum residential → transitioned to commercial Passive
-- Treated IK "like a key advisor in his business"
+### Michael — 13 properties, $16.54M, $2.8M equity in 5 years
+- Spanned 5 states
+- Clear arc: foundational residential → momentum regional → commercial transition
+- The furthest along any publicly showcased IK client
 
 ### Raj & Sowji — 8 properties, $9M+, 4 states
-- Explicitly named Foundation → Momentum → now transitioning to commercial Passive
-- The case study that confirmed IK's three-stage language publicly
-- Quote from IK on their journey through the stages
+- Went through Foundation → Momentum explicitly
+- Now transitioning to Passive (commercial/unit blocks)
+- The case study that confirmed IK's three-stage language
 
-### Ryan & Lauren — 5 properties, $4.5M, built by age 30
-- Both physios in Darwin
-- Brisbane house (2020): $485k → ~$1M (106%)
-- Bundaberg (2022): $390k → $620k (59%)
-- Ballarat (DIY, earlier): slow performer — contrast lesson
+### Ryan & Lauren — 5 properties, $4.5M by age 30
+- Two physios in Darwin
+- Brisbane 2020: $485k → ~$1M (106% growth)
+- Bundaberg 2022: $390k → $620k (59%)
 - Portfolio plan shows: on track for $100k+ inflation-adjusted passive income in retirement
-- Key quote: *"They no longer feel like retirement is an open question. They know time is now working in their favour."*
+- Quote: *"They no longer feel like retirement is an open question. They know time is now working in their favour."*
 
-### Nafiz — 5 properties, $2.86M, $900k+ equity, 5 years
-- 26-year-old young professional living at home when he started
-- First buy: Brisbane house, 2019 → now up 95.94%
-- Spread across QLD, SA, WA
-- Each purchase matched to life stage + income growth
-- Full episode on The Property Nerds: June 2025
+### Nafiz — 5 properties, $2.86M, $900k+ equity over 5 years
+- Started at 26, living at home
+- Brisbane 2019: up 95.94%
+- Built across QLD, SA, WA
+- Matched each purchase to life stage and income growth
 
-### Daniel — 7 properties, $8.92M
+### Daniel — 7 properties, $8.92M portfolio
 - Business owner, started 2020
 - Brisbane $550k → $1.02M (85.45%)
-- 4 states, growth + yield + diversification blend
+- Spans 4 states
+- Treats IK "like a key advisor in his business"
 
-### The "3 properties in 3 years" Benchmark
-IK's headline claim: *"Most of our clients obtain 3 properties within 3 years."*
-This places clients in the top 10% of Australian property investors by volume.
+### The Headline Stat
+> "Most of our clients obtain 3 properties within 3 years" — puts clients in top 10% of property investors in Australia.
 
 ---
 
-## InvestorKit's Content Ecosystem
+## The Portfolio Mapping Session — IK's Core Product
+
+This is what IK ACTUALLY SELLS. Not just properties. A forward-looking portfolio plan.
+
+### What happens:
+1. Understand financial goals, investment experience, risk profile
+2. Build a tailored brief — targets yield, capital growth, or cash flow balance
+3. Generate a portfolio plan — forward-looking roadmap showing long-term impact
+4. Collaborate with broker to validate borrowing capacity
+5. Produce a buyer brief that drives acquisition
+
+### What the Portfolio Plan projects:
+- Portfolio value trajectory
+- Passive income at target date (e.g. retirement)
+- Inflation-adjusted projections
+- Multi-property, multi-state view
+
+This is where Gameplans (their visual modelling tool, branded as "Portfolio Wealth Accelerator") is used. The PWA was a campaign/content wrapper for Gameplans-powered sessions — NOT a standalone software product (page now redirects to homepage).
+
+### Ongoing rhythm:
+- Annual reviews (confirmed in FAQ as baseline)
+- Monthly client review sessions (mentioned in Portfolio Strategist job description — may apply to active/high-velocity clients)
+- Portfolio Strategist identifies upsell opportunities between purchases
+
+---
+
+## Content & Brand Ecosystem
 
 ### The Property Nerds Podcast
-- Hosts: Arjun Paliwal (IK), Jack Fouracre (Fouracre Financial), Adrian Lee (Senior Portfolio Strategist, IK)
-- Published on Smart Property Investment (SPI) network AND standalone feed
-- Launched 2021 (originally Arjun + Kent Lardner of Suburbtrends)
-- 2023/2024: evolved to Arjun + Adrian + Jack format
-- Topics: market data, client journeys, strategy debates, yield vs growth, macro conditions
+- Hosts: Arjun Paliwal (IK Founder), Adrian Lee (Senior Portfolio Strategist, IK), Jack Fouracre (Fouracre Financial)
+- Published on: Smart Property Investment network AND standalone feed
+- Original co-host: Kent Lardner (Suburbtrends) — inception 2021
+- Topics: market data, client stories, strategy deep dives, portfolio frameworks
+- Recent: Nafiz client story (June 2025)
 
-### InvestorKit Blog / Media
-- 1,000+ media articles
-- Forbes Australia Aug 2025 feature
-- Regular commentary on SPI, Your Investment Property, etc.
+### InvestorKit Podcast (separate)
+- Client stories, investor journeys
+- More case-study focused
+
+### Blog / Media
+- investorkit.com.au/blog — strategy articles, market commentary
+- 1000+ media appearances
+- Forbes Australia (Aug 2025) major feature
 
 ### Social
-- Arjun: @arjpaliwal Instagram (8.3k), @arjunfrominvestorkit Facebook (9.2k)
-- Not as social-first as some BAs — media and podcast are the primary channels
-
----
-
-## How InvestorKit Performs
-
-- Outperformed the national property market by **49%+ every year** since inception
-- 700+ five-star reviews
-- 1,200+ client families
-- Near-doubling revenue YoY since 2023
+- Instagram: @arjpaliwal — 8.3k followers
+- Facebook: @arjunfrominvestorkit — 9.2k likes
 
 ---
 
@@ -209,34 +221,47 @@ This places clients in the top 10% of Australian property investors by volume.
 
 | Name | Role |
 |------|------|
-| Arjun Paliwal | Founder & CEO, Head of Research |
-| Adrian Lee | Senior Portfolio Strategist; Property Nerds co-host |
-| Jack Fouracre | Property Nerds co-host (Fouracre Financial — broker partner) |
-| AJ | Team member (mentioned in client reviews) |
+| Arjun Paliwal | Founder & CEO, Head of Research. Ex-CBA. Had 9 properties at 26. |
+| Adrian Lee | Senior Portfolio Strategist. Co-host of Property Nerds. |
+| Jack Fouracre | External — co-host on Property Nerds, runs Fouracre Financial (mortgage broking) |
+| Kent Lardner | Original Property Nerds co-host, Suburbtrends (data) — appears to have stepped back |
 
 ---
 
-## What Kind of Client IK Attracts
+## Research Methodology (What Makes IK's Selection Different)
 
-Based on case studies:
-- Professional couples (physios, business owners, engineers) — dual income, strong serviceability
-- Young singles living at home — high savings rate, low overhead
-- Established investors who've stalled (1-2 properties, want to accelerate)
-- SMSF holders and trust structures (sophisticated, high net worth)
-- All national — no geographic concentration required
-
-Common denominator: **They want a system, not just a deal.** IK clients are buying into the framework (three stages, annual review, portfolio plan) — not just a single property recommendation.
+- Buying in 9–15 markets at any given time (national, not local)
+- 20-point due diligence checklist per property
+- Rejects 92% of properties reviewed
+- 70% of deals sourced off-market
+- Has outperformed national property market by 49%+ every year since inception
+- Counter-cyclical — often buying against herd mentality
+- Macro signals: population growth, infrastructure, employment, supply/demand
+- Micro signals: vacancy rates, rental demand, comparable sales, suburb trajectory
 
 ---
 
-## What IK Does NOT Offer (Gaps)
+## What IK Clients Experience Emotionally
 
-- No client-facing dashboard or portal
-- No self-service scenario modelling for clients
-- No automated equity tracking between purchases
-- No milestone alerts ("your Brisbane property just hit X equity — time to review")
-- Annual reviews are human-delivered (Portfolio Strategist time-intensive)
-- No structured Acquire → Optimise → Consolidate tracking visible to clients
-- Commercial roadmap is informal — not modelled in a visual tool
+From case studies and podcast content, the recurring emotional arc:
 
-The portfolio plan is created in sessions (likely using Gameplans), but clients don't have their own live copy — it's a point-in-time document, not a living dashboard.
+1. **Confusion/Overwhelm** — too many suburbs, too much conflicting advice, don't know where to start
+2. **First purchase relief** — "I've finally done it, I'm on the board"
+3. **Impatience** — waiting for equity to build, wanting to buy again
+4. **Milestone clarity** — "I can see the plan now, I know what next looks like"
+5. **Confidence** — repeat purchases feel easier, trust in the process
+6. **Peace of mind** — knowing they're on track for retirement, not just hoping
+
+The Ryan & Lauren quote captures the IK end-state promise perfectly:
+> *"They no longer feel like retirement is an open question. They know time is now working in their favour."*
+
+---
+
+## IK's Competitive Moat
+
+1. **Data infrastructure** — proprietary research, 49%+ outperformance, hard to replicate
+2. **Private banking model** — Portfolio Strategist = trusted advisor, not a transactional agent
+3. **Awards** — REB BA of Year 2x running creates credibility in a trust-based market
+4. **Content flywheel** — Property Nerds podcast creates warm leads, educates prospects, builds authority
+5. **Annual reviews** — ongoing client relationship = repeat purchases, referrals, LTV
+6. **National reach** — 9–15 markets active simultaneously, not limited by local knowledge

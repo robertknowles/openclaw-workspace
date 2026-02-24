@@ -32,11 +32,11 @@
       "model": {
         "primary": "openrouter/anthropic/claude-sonnet-4.6",
         "fallbacks": [
-          "openrouter/openai/minimax-m2.5"
+          "openrouter/minimax/minimax-m2.5"
         ]
       },
       "models": {
-        "openrouter/openai/minimax-m2.5": {
+        "openrouter/minimax/minimax-m2.5": {
           "alias": "minimax-2.5"
         },
         "openrouter/anthropic/claude-sonnet-4.6": {
@@ -44,51 +44,18 @@
         }
       },
       "compaction": {
-        "mode": "safeguard"
-      },
-      "subagents": {
-        "maxSpawnDepth": 1,
-        "maxChildrenPerAgent": 5,
-        "model": "openrouter/openai/minimax-m2.5"
+        "reserveTokensFloor": 20000,
+        "memoryFlush": {
+          "enabled": true,
+          "softThresholdTokens": 50000,
+          "systemPrompt": "Session nearing compaction. Store durable memories now — update HANDOFF.md with current task state and next steps.",
+          "prompt": "Write current task state, key findings, and immediate next steps to memory/knowledge/HANDOFF.md. Reply NO_REPLY when done."
+        }
       }
     },
     "list": [
       {
-        "id": "main",
-        "subagents": {
-          "allowAgents": [
-            "scout",
-            "closer",
-            "hunter"
-          ]
-        },
-        "tools": {
-          "allow": [
-            "sessions_spawn",
-            "sessions_send",
-            "sessions_history",
-            "sessions_list",
-            "agents_list"
-          ]
-        }
-      },
-      {
-        "id": "scout",
-        "name": "scout",
-        "workspace": "/Users/robertknowles/.openclaw/workspace-scout",
-        "agentDir": "/Users/robertknowles/.openclaw/agents/scout/agent"
-      },
-      {
-        "id": "closer",
-        "name": "closer",
-        "workspace": "/Users/robertknowles/.openclaw/workspace-closer",
-        "agentDir": "/Users/robertknowles/.openclaw/agents/closer/agent"
-      },
-      {
-        "id": "hunter",
-        "name": "hunter",
-        "workspace": "/Users/robertknowles/.openclaw/workspace-hunter",
-        "agentDir": "/Users/robertknowles/.openclaw/agents/hunter/agent"
+        "id": "main"
       }
     ]
   },
@@ -102,7 +69,12 @@
       "enabled": true,
       "token": "MTQ3MjQzMjUxMjU5OTg1NTI5NQ.GQtqr3.-AjIKX5UHuIUOsSRP1q4aPSp1d8RDLON0R5YHk",
       "groupPolicy": "allowlist",
-      "guilds": {}
+      "guilds": {
+        "1472448860650733731": {
+          "requireMention": false,
+          "users": ["547887855729639434"]
+        }
+      }
     }
   },
   "gateway": {

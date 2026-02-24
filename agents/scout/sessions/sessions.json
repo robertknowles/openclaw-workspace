@@ -1,0 +1,16 @@
+{
+  "agent:scout:subagent:a0ac5a8f-5f2c-42b4-892c-f903349a2e5e": {
+    "sessionId": "c434cbf8-7c1a-461d-a4a1-0049ddfdf2fb",
+    "updatedAt": 1771721196231,
+    "spawnDepth": 1,
+    "providerOverride": "openrouter",
+    "modelOverride": "openai/minimax-m2.5"
+  },
+  "agent:scout:subagent:d4b54e1a-b31b-4854-b776-1f6cab6cd45d": {
+    "sessionId": "c1d17c09-7009-41ec-973c-a6eee8cb72b3",
+    "updatedAt": 1771721753892,
+    "spawnDepth": 1,
+    "providerOverride": "openrouter",
+    "modelOverride": "openai/minimax-m2.5"
+  }
+}

@@ -1,0 +1,1 @@
+{"ts":1771743600047,"jobId":"0fba335b-2f73-4058-a372-0986a2ee4413","action":"finished","status":"error","error":"model not allowed: openrouter/openai/minimax-m2.5","runAtMs":1771743600015,"durationMs":22,"nextRunAtMs":1772348400000}

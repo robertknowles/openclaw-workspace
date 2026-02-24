@@ -1,0 +1,261 @@
+#!/usr/bin/env node
+/**
+ * Rank leads by investment focus using data from the merged leads.json.
+ * Focus: investment-focused buyers' agents, investor portfolio management,
+ * property investment, wealth creation, off-market, capital growth (real estate only).
+ * Exclude: generic capital markets, banks, government, IP law, marketing agencies etc.
+ */
+
+const fs = require('fs');
+const path = require('path');
+
+const dataDir = path.join(process.env.HOME, 'Documents/openclaw/mission_control_data');
+const leads = JSON.parse(fs.readFileSync(path.join(dataDir, 'leads.json'), 'utf8'));
+
+// Exclusion patterns — clearly not investment-focused buyers' agents
+const EXCLUDE_PATTERNS = [
+  /\bbank\b/i, /\bcouncil\b/i, /\buniversity\b/i, /\bgovernment\b/i,
+  /\bpatent\b/i, /\btrade\s*mark/i, /\blawyer/i, /\blegal\s*services?\b/i,
+  /\binsurance\b/i, /\bmarketing\s*(agency|firm|company)\b/i,
+  /\brecruitment\b/i, /\bwater\b/i, /\btelstra\b/i, /\bsuncorp\b/i,
+  /\bcommonwealth\b/i, /\b(anz|nab|westpac)\b/i, /\barcadis\b/i,
+  /\bIP\s*(attorney|strategist|law)/i, /\bintellectual\s*property\b/i,
+  /\bwine\b/i, /\bwinery\b/i, /\bauction\b(?!.*property)/i,
+  /\bsuper\s*fund\b/i, /\brmit\b/i, /\bwestern\s*sydney\s*university\b/i,
+  /\bpenrith\s*city/i, /\bport\s*(macquarie|stephens)/i, /\bforbes\s*shire/i,
+  /\bpowerlink/i, /\bdepartment\s*of/i, /\bunitingcare/i, /\bsydney\s*water/i,
+  /\bcbus\b/i, /\bvictorian\s*funds/i, /\bqic\b/i, /\bskyfields/i,
+  /\bdaydream\s*island/i, /\bcolumbus\s*fair/i
+];
+
+// Strong positive signals
+const HIGH_SIGNALS = [
+  /\binvestment[\s-]*focus/i,
+  /\binvestment[\s-]*property\b/i,
+  /\binvestor[\s']?s?\s*(buyers?\s*agent|advocate|advisory)/i,
+  /\bbuyers?\s*agent.*invest/i,
+  /\binvest.*buyers?\s*agent/i,
+  /\bproperty\s*investment\s*(advisor|adviser|specialist|strategist|consultant|coach|mentor)/i,
+  /\bproperty\s*strateg/i,
+  /\bportfolio\s*(management|building|growth|planning|diversif)/i,
+  /\bwealth\s*(creation|building|planning|management|coach)/i,
+  /\boff[\s-]*market\s*propert/i,
+  /\bcapital\s*growth.*propert/i,
+  /\bsmsf\s*propert/i,
+  /\binvestment\s*portfolio/i,
+  /\bproperty\s*portfolio/i,
+  /\bqualified\s*property\s*investment/i,
+  /\bqpia\b/i,
+  /\binvestment[\s-]*grade/i,
+  /\bcash\s*flow\s*positive/i,
+  /\bpositively\s*geared/i,
+  /\binvestment\s*risk/i,
+  /\binvestment\s*lending/i,
+  /\bdata[\s-]*driven.*invest/i,
+  /\bhigh[\s-]*growth\s*(suburb|property|market)/i,
+  /\brental\s*yield/i,
+  /\brentvesting/i
+];
+
+// Medium positive signals
+const MEDIUM_SIGNALS = [
+  /\bbuyers?\s*agent/i,
+  /\bbuyers?\s*advocate/i,
+  /\bbuyers?\s*agency/i,
+  /\bproperty\s*advisory/i,
+  /\breal\s*estate\s*invest/i,
+  /\bproperty\s*invest/i,
+  /\bproperty\s*sourc/i,
+  /\bwealth\b/i,
+  /\binvestment\b/i,
+  /\boff[\s-]*market/i,
+  /\bcapital\s*growth/i,
+  /\bproperty\s*negotiat/i,
+  /\bproperty\s*acquisi/i,
+  /\bproperty\s*research/i,
+  /\bretirement\s*planning/i,
+  /\bfinancial\s*planning/i,
+  /\bsmsf\b/i,
+  /\bdepreciation/i,
+  /\bcash\s*flow/i,
+  /\blong[\s-]*term\s*(wealth|growth|invest)/i,
+  /\bproperty\s*development/i
+];
+
+function getBlob(lead) {
+  return [
+    lead.company_name,
+    lead.company_description,
+    lead.industry,
+    lead.keywords,
+    lead.notes,
+    lead.category,
+    ...(lead.people || []).map(p => `${p.title} ${p.name}`)
+  ].filter(Boolean).join(' ');
+}
+
+function isExcluded(lead) {
+  const blob = getBlob(lead);
+  const name = lead.company_name || '';
+  // Check company name and blob against exclusion patterns
+  for (const pat of EXCLUDE_PATTERNS) {
+    if (pat.test(name)) return true;
+  }
+  // Check industry for clearly non-relevant
+  const ind = (lead.industry || '').toLowerCase();
+  if (/^(wine|legal|government|insurance|banking|mining|logistics|machinery|staffing)/.test(ind)) return true;
+  return false;
+}
+
+function scoreInvestmentFocus(lead) {
+  const blob = getBlob(lead);
+  let highCount = 0;
+  let medCount = 0;
+  const signals = [];
+
+  for (const pat of HIGH_SIGNALS) {
+    if (pat.test(blob)) {
+      highCount++;
+      signals.push(pat.source.replace(/\\b|\\s|\[\\s-\]\*/g, ' ').replace(/\(.*?\)/g, '').trim().substring(0, 40));
+    }
+  }
+  for (const pat of MEDIUM_SIGNALS) {
+    if (pat.test(blob)) {
+      medCount++;
+    }
+  }
+
+  // Category from Company CSV is a strong signal
+  const cat = (lead.category || '').toLowerCase();
+  if (cat.includes('investment focus') || cat.includes('investment keyword')) {
+    highCount += 3;
+    signals.push('category: investment focus');
+  }
+
+  // Notes from Company CSV
+  const notes = (lead.notes || '').toLowerCase();
+  if (notes.includes('investment-focused') || notes.includes('investment focus')) {
+    highCount += 2;
+    signals.push('notes: investment-focused');
+  }
+  if (notes.includes('explicitly') && notes.includes('invest')) {
+    highCount += 2;
+    signals.push('notes: explicitly investment');
+  }
+
+  let rank = 'low';
+  if (highCount >= 3) rank = 'high';
+  else if (highCount >= 1 && medCount >= 3) rank = 'high';
+  else if (highCount >= 1 || medCount >= 4) rank = 'medium';
+  else if (medCount >= 2) rank = 'medium';
+
+  return { rank, highCount, medCount, signals: [...new Set(signals)].slice(0, 5) };
+}
+
+function generateBlurb(lead) {
+  const parts = [];
+  const name = lead.company_name || 'Unknown';
+  
+  // Use people titles for context
+  const titles = (lead.people || [])
+    .map(p => p.title)
+    .filter(t => t && t.length > 5)
+    .slice(0, 2);
+  
+  const ind = lead.industry || '';
+  const cat = lead.category || '';
+  const notes = lead.notes || '';
+  const kw = (lead.keywords || '').split(',').slice(0, 5).map(k => k.trim()).filter(Boolean);
+  const loc = [lead.company_city, lead.company_state].filter(Boolean).join(', ');
+  
+  // Build blurb
+  if (titles.length > 0) {
+    parts.push(`${name}: ${titles[0]}.`);
+  } else if (ind) {
+    parts.push(`${name} (${ind}).`);
+  } else {
+    parts.push(`${name}.`);
+  }
+  
+  if (notes) {
+    parts.push(notes.split(';')[0].trim() + '.');
+  } else if (kw.length > 0) {
+    parts.push(`Focus: ${kw.join(', ')}.`);
+  }
+  
+  if (loc) parts.push(`Based in ${loc}.`);
+  
+  return parts.join(' ').substring(0, 300);
+}
+
+// Process all leads
+const results = [];
+
+for (const lead of leads) {
+  if (isExcluded(lead)) {
+    lead.investment_focus_rank = 'excluded';
+    continue;
+  }
+  
+  const { rank, highCount, medCount, signals } = scoreInvestmentFocus(lead);
+  lead.investment_focus_rank = rank;
+  
+  const blurb = generateBlurb(lead);
+  
+  results.push({
+    company_name: lead.company_name,
+    employee_count: lead.employee_count,
+    investment_focus_rank: rank,
+    high_signals: highCount,
+    medium_signals: medCount,
+    key_signals: signals,
+    blurb,
+    people_count: (lead.people || []).length,
+    category: lead.category || '',
+    location: [lead.company_city, lead.company_state, lead.company_country].filter(Boolean).join(', ')
+  });
+}
+
+// Sort: high first, then medium, then low; within each tier sort by high_signals desc, then medium_signals desc
+const rankOrder = { high: 0, medium: 1, low: 2 };
+results.sort((a, b) => {
+  if (rankOrder[a.investment_focus_rank] !== rankOrder[b.investment_focus_rank]) {
+    return rankOrder[a.investment_focus_rank] - rankOrder[b.investment_focus_rank];
+  }
+  if (a.high_signals !== b.high_signals) return b.high_signals - a.high_signals;
+  return b.medium_signals - a.medium_signals;
+});
+
+// Save full ranked results
+fs.writeFileSync(path.join(dataDir, 'leads_ranked.json'), JSON.stringify(results, null, 2));
+
+// Also update the main leads.json with ranks
+fs.writeFileSync(path.join(dataDir, 'leads.json'), JSON.stringify(leads, null, 2));
+
+// Stats
+const highCount = results.filter(r => r.investment_focus_rank === 'high').length;
+const medCount = results.filter(r => r.investment_focus_rank === 'medium').length;
+const lowCount = results.filter(r => r.investment_focus_rank === 'low').length;
+const excludedCount = leads.filter(l => l.investment_focus_rank === 'excluded').length;
+
+console.log('=== INVESTMENT FOCUS RANKING REPORT ===');
+console.log(`Total leads processed: ${leads.length}`);
+console.log(`Excluded (not relevant): ${excludedCount}`);
+console.log(`High focus: ${highCount}`);
+console.log(`Medium focus: ${medCount}`);
+console.log(`Low focus: ${lowCount}`);
+console.log(`Ranked results saved to: ${path.join(dataDir, 'leads_ranked.json')}`);
+
+// Top 30 High
+console.log('\n=== TOP 30 HIGH INVESTMENT FOCUS ===');
+results.filter(r => r.investment_focus_rank === 'high').slice(0, 30).forEach((r, i) => {
+  console.log(`${i+1}. ${r.company_name} | emp: ${r.employee_count} | signals: ${r.key_signals.join(', ')} | people: ${r.people_count} | loc: ${r.location}`);
+  console.log(`   ${r.blurb}`);
+});
+
+// Top 20 Medium
+console.log('\n=== TOP 20 MEDIUM INVESTMENT FOCUS ===');
+results.filter(r => r.investment_focus_rank === 'medium').slice(0, 20).forEach((r, i) => {
+  console.log(`${i+1}. ${r.company_name} | emp: ${r.employee_count} | people: ${r.people_count} | loc: ${r.location}`);
+  console.log(`   ${r.blurb}`);
+});

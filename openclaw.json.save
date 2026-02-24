@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.14",
+    "lastTouchedAt": "2026-02-16T02:27:53.086Z"
+  },
+  "env": {
+    "BRAVE_API_KEY": "BSAiv43sGvWPGV6P6QxNV4Y-akukfy0"
+  },
+  "wizard": {
+    "lastRunAt": "2026-02-15T09:11:46.888Z",
+    "lastRunVersion": "2026.2.14",
+    "lastRunCommand": "configure",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {
+      "openrouter:default": {
+        "provider": "openrouter",
+        "mode": "api_key"
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "openrouter/openai/gpt-4.1-nano",
+        "fallbacks": [
+          "openrouter/anthropic/claude-sonnet-4.5"
+        ]
+      },
+      "models": {
+        "openrouter/auto": {
+          "alias": "OpenRouter"
+        },
+        "openrouter/anthropic/claude-sonnet-4.5": {},
+        "openrouter/openai/gpt-4.1-nano": {
+          "alias": "GPT-4.1 Nano"
+        }
+      },
+      "workspace": "~/.openclaw/workspace",
+      "compaction": {
+        "mode": "safeguard"
+      }
+    }
+  },
+  "commands": { "browser": { "defaultProfile": "openclaw" },
+    "native": "auto",
+    "nativeSkills": "auto"
+  },
+  "channels": {
+    "discord": {
+      "enabled": true,
+      "token": "MTQ3MjQzMjUxMjU5OTg1NTI5NQ.G4JfDo.ipDISMMl9UiSiytw7kPM91XhyWpP0QOA_HbO8U",
+      "groupPolicy": "allowlist",
+      "guilds": {}
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "ea38dff4f51e4d525415aa25c2061247465005dec44a7156"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    }
+  },
+  "memory": {
+    "backend": "qmd",
+    "qmd": {
+      "includeDefaultMemory": true,
+      "sessions": {
+        "enabled": true
+      },
+      "update": {
+        "interval": "30",
+        "embedInterval": "120"
+      }
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    }
+  },
+  "plugins": {
+    "entries": {
+      "discord": {
+        "enabled": true
+      }
+    }
+  }
+}

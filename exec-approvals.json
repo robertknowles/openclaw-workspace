@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "socket": {
+    "path": "/Users/robertknowles/.openclaw/exec-approvals.sock",
+    "token": "BgPcqSmY0ktHMcAIx243Wl--P-__70_i"
+  },
+  "defaults": {},
+  "agents": {
+    "main": {
+      "allowlist": [
+        {
+          "id": "85b082ed-0b26-456c-824f-70d25f544acf",
+          "pattern": "/bin/mkdir",
+          "lastUsedAt": 1771733678247,
+          "lastUsedCommand": "mkdir -p /Users/robertknowles/.openclaw/workspace/memory/knowledge",
+          "lastResolvedPath": "/bin/mkdir"
+        },
+        {
+          "id": "db31b6c9-3c8c-45e6-8f6e-be541c67f4cb",
+          "pattern": "/usr/local/bin/openclaw",
+          "lastUsedAt": 1771738487265,
+          "lastUsedCommand": "openclaw gateway restart",
+          "lastResolvedPath": "/usr/local/bin/openclaw"
+        },
+        {
+          "id": "025f386a-65dc-4941-90b5-a7dae8c68968",
+          "pattern": "/usr/bin/grep",
+          "lastUsedAt": 1771738211857
+        },
+        {
+          "id": "b799a4d9-a170-4186-82ff-e16702564bb2",
+          "pattern": "/usr/bin/head",
+          "lastUsedAt": 1771738211858
+        }
+      ]
+    }
+  }
+}

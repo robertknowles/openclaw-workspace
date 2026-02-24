@@ -1,0 +1,1 @@
+{"ts":1771434897942,"jobId":"04d66569-26d4-4001-90ae-647a8842d577","action":"finished","status":"error","error":"model not allowed: openrouter/anthropic/claude-3-haiku","runAtMs":1771434897917,"durationMs":8,"nextRunAtMs":1771520400000}

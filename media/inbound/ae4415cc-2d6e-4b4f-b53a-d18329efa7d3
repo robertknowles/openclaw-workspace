@@ -1,0 +1,246 @@
+#!/usr/bin/env node
+/**
+ * Merge Individuals.csv + Company.csv into a unified lead database.
+ * - Dedupe by company_name (normalised), linkedin_url as secondary key
+ * - Sort by employee_count DESC
+ * - Output JSON to mission_control_data/leads.json
+ */
+
+const fs = require('fs');
+const path = require('path');
+
+// Simple CSV parser that handles quoted fields with commas
+function parseCSV(text) {
+  const lines = [];
+  let current = '';
+  let inQuotes = false;
+  
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if (ch === '"') {
+      if (inQuotes && text[i + 1] === '"') {
+        current += '"';
+        i++;
+      } else {
+        inQuotes = !inQuotes;
+      }
+    } else if (ch === '\n' && !inQuotes) {
+      if (current.endsWith('\r')) current = current.slice(0, -1);
+      lines.push(current);
+      current = '';
+    } else {
+      current += ch;
+    }
+  }
+  if (current.trim()) lines.push(current);
+  
+  // Parse each line into fields
+  return lines.map(line => {
+    const fields = [];
+    let field = '';
+    let inQ = false;
+    for (let i = 0; i < line.length; i++) {
+      const ch = line[i];
+      if (ch === '"') {
+        if (inQ && line[i + 1] === '"') {
+          field += '"';
+          i++;
+        } else {
+          inQ = !inQ;
+        }
+      } else if (ch === ',' && !inQ) {
+        fields.push(field);
+        field = '';
+      } else {
+        field += ch;
+      }
+    }
+    fields.push(field);
+    return fields;
+  });
+}
+
+function normalise(s) {
+  return (s || '').replace(/\*\*/g, '').trim().toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
+// Read files
+const individualsPath = '/Users/robertknowles/Downloads/ContactList_PropPath - Individuals.csv';
+const companyPath = '/Users/robertknowles/Downloads/ContactList_PropPath - Company.csv';
+
+const indRows = parseCSV(fs.readFileSync(individualsPath, 'utf8'));
+const compRows = parseCSV(fs.readFileSync(companyPath, 'utf8'));
+
+const indHeaders = indRows[0];
+const compHeaders = compRows[0];
+
+// Build index maps for individuals headers
+const indIdx = {};
+indHeaders.forEach((h, i) => { indIdx[h.trim()] = i; });
+
+const compIdx = {};
+compHeaders.forEach((h, i) => { compIdx[h.trim()] = i; });
+
+// Leads map: key = normalised company name
+const leads = {};
+
+// Process Individuals CSV
+for (let r = 1; r < indRows.length; r++) {
+  const row = indRows[r];
+  if (!row || row.length < 5) continue;
+  
+  const companyName = (row[indIdx['Company Name']] || '').replace(/\*\*/g, '').trim();
+  const firstName = (row[indIdx['First Name']] || '').trim();
+  const lastName = (row[indIdx['Last Name']] || '').trim();
+  const title = (row[indIdx['Title']] || '').trim();
+  const linkedinUrl = (row[indIdx['Person Linkedin Url']] || '').trim();
+  const email = (row[indIdx['Email']] || '').trim();
+  const phone = (row[indIdx['Mobile Phone']] || row[indIdx['Work Direct Phone']] || row[indIdx['Corporate Phone']] || '').trim();
+  const employeeCount = parseInt(row[indIdx['# Employees']] || '0', 10) || 0;
+  const industry = (row[indIdx['Industry']] || '').trim();
+  const website = (row[indIdx['Website']] || '').trim();
+  const companyLinkedin = (row[indIdx['Company Linkedin Url']] || '').trim();
+  const city = (row[indIdx['City']] || '').trim();
+  const state = (row[indIdx['State']] || '').trim();
+  const country = (row[indIdx['Country']] || '').trim();
+  const notes = (row[indIdx['Notes']] || '').trim();
+  const stage = (row[indIdx['Stage']] || '').trim();
+  const keywords = (row[indIdx['Keywords']] || '').trim();
+  const companyCity = (row[indIdx['Company City']] || '').trim();
+  const companyState = (row[indIdx['Company State']] || '').trim();
+  const companyCountry = (row[indIdx['Company Country']] || '').trim();
+  
+  if (!companyName && !firstName) continue;
+  
+  const key = normalise(companyName) || normalise(firstName + lastName);
+  
+  const person = {
+    name: `${firstName} ${lastName}`.trim(),
+    title,
+    linkedin_url: linkedinUrl,
+    email,
+    phone,
+    city,
+    state,
+    country
+  };
+  
+  if (!leads[key]) {
+    leads[key] = {
+      company_name: companyName || `${firstName} ${lastName}`.trim(),
+      employee_count: employeeCount,
+      company_description: '',
+      company_linkedin_url: companyLinkedin,
+      website,
+      industry,
+      keywords,
+      company_city: companyCity,
+      company_state: companyState,
+      company_country: companyCountry,
+      category: '',
+      source: 'Individuals CSV',
+      notes: notes,
+      stage,
+      investment_focus_rank: '', // to be filled in validation phase
+      people: [person]
+    };
+  } else {
+    // Update employee count if higher
+    if (employeeCount > leads[key].employee_count) {
+      leads[key].employee_count = employeeCount;
+    }
+    // Add person if not already there
+    const exists = leads[key].people.some(p => 
+      normalise(p.name) === normalise(person.name) || 
+      (person.linkedin_url && p.linkedin_url === person.linkedin_url)
+    );
+    if (!exists) {
+      leads[key].people.push(person);
+    }
+    // Fill in missing fields
+    if (!leads[key].website && website) leads[key].website = website;
+    if (!leads[key].company_linkedin_url && companyLinkedin) leads[key].company_linkedin_url = companyLinkedin;
+    if (!leads[key].industry && industry) leads[key].industry = industry;
+    if (notes && !leads[key].notes.includes(notes)) leads[key].notes += (leads[key].notes ? '; ' : '') + notes;
+  }
+}
+
+// Process Company CSV — merge into existing leads or create new ones
+for (let r = 1; r < compRows.length; r++) {
+  const row = compRows[r];
+  if (!row || row.length < 2) continue;
+  
+  const companyName = (row[compIdx['Company Name']] || '').replace(/\*\*/g, '').trim();
+  const category = (row[compIdx['Category']] || '').replace(/\*\*/g, '').trim();
+  const source = (row[compIdx['Source']] || '').replace(/\*\*/g, '').trim();
+  const notes = (row[compIdx['Notes']] || '').replace(/\*\*/g, '').trim();
+  
+  if (!companyName || companyName === 'Company Name' || companyName === ':---') continue;
+  
+  const key = normalise(companyName);
+  
+  if (leads[key]) {
+    // Merge company data
+    if (category) leads[key].category = category;
+    if (source) leads[key].source = source + (leads[key].source ? ', ' + leads[key].source : '');
+    if (notes && !leads[key].notes.includes(notes)) {
+      leads[key].notes += (leads[key].notes ? '; ' : '') + notes;
+    }
+  } else {
+    leads[key] = {
+      company_name: companyName,
+      employee_count: 0,
+      company_description: '',
+      company_linkedin_url: '',
+      website: '',
+      industry: '',
+      keywords: '',
+      company_city: '',
+      company_state: '',
+      company_country: '',
+      category,
+      source,
+      notes,
+      stage: '',
+      investment_focus_rank: '',
+      people: []
+    };
+  }
+}
+
+// Convert to array and sort by employee_count DESC
+const leadsArray = Object.values(leads).sort((a, b) => b.employee_count - a.employee_count);
+
+// Stats
+const totalLeads = leadsArray.length;
+const withPeople = leadsArray.filter(l => l.people.length > 0).length;
+const totalPeople = leadsArray.reduce((sum, l) => sum + l.people.length, 0);
+const withEmployeeData = leadsArray.filter(l => l.employee_count > 0).length;
+const fromIndividuals = leadsArray.filter(l => l.source.includes('Individuals')).length;
+const fromCompany = leadsArray.filter(l => !l.source.includes('Individuals')).length;
+const merged = leadsArray.filter(l => l.source.includes('Individuals') && l.category).length;
+
+// Output
+const outputDir = path.join(process.env.HOME, 'Documents/openclaw/mission_control_data');
+fs.mkdirSync(outputDir, { recursive: true });
+
+const outputPath = path.join(outputDir, 'leads.json');
+fs.writeFileSync(outputPath, JSON.stringify(leadsArray, null, 2));
+
+console.log('=== LEAD MERGE REPORT ===');
+console.log(`Total unique leads: ${totalLeads}`);
+console.log(`Leads with people: ${withPeople}`);
+console.log(`Total people records: ${totalPeople}`);
+console.log(`Leads with employee count data: ${withEmployeeData}`);
+console.log(`From Individuals CSV only: ${fromIndividuals - merged}`);
+console.log(`From Company CSV only: ${fromCompany}`);
+console.log(`Merged (both sources): ${merged}`);
+console.log(`\nSorted by employee_count DESC`);
+console.log(`Output: ${outputPath}`);
+
+// Top 20
+console.log('\n=== TOP 20 LEADS (by employee count) ===');
+leadsArray.slice(0, 20).forEach((l, i) => {
+  const ppl = l.people.map(p => p.name).join(', ');
+  console.log(`${i+1}. ${l.company_name} | employees: ${l.employee_count} | people: ${ppl || 'none'} | category: ${l.category || 'unclassified'}`);
+});

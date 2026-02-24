@@ -1,0 +1,2 @@
+{"ts":1771795325801,"jobId":"65b8e8f6-6800-4f56-86d8-3d022f9971d8","action":"finished","status":"error","error":"model not allowed: openrouter/openai/minimax-m2.5","runAtMs":1771795325637,"durationMs":73,"nextRunAtMs":1771880400000}
+{"ts":1771882859679,"jobId":"65b8e8f6-6800-4f56-86d8-3d022f9971d8","action":"finished","status":"error","error":"model not allowed: openrouter/openai/minimax-m2.5","runAtMs":1771882859638,"durationMs":10,"nextRunAtMs":1771966800000}

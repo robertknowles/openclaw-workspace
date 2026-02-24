@@ -1,0 +1,12 @@
+2026/02/22-16:41:58.652 306f64 Reusing MANIFEST /Users/robertknowles/.openclaw/browser/openclaw/user-data/Default/Local Storage/leveldb/MANIFEST-000001
+2026/02/22-16:41:58.661 306f64 Recovering log #3
+2026/02/22-16:41:58.662 306f64 Reusing old log /Users/robertknowles/.openclaw/browser/openclaw/user-data/Default/Local Storage/leveldb/000003.log 
+2026/02/22-16:42:35.345 306f64 Level-0 table #5: started
+2026/02/22-16:42:35.352 306f64 Level-0 table #5: 42135 bytes OK
+2026/02/22-16:42:35.358 306f64 Delete type=0 #3
+2026/02/22-16:42:58.677 306f67 Level-0 table #7: started
+2026/02/22-16:42:58.706 306f67 Level-0 table #7: 91876 bytes OK
+2026/02/22-16:42:58.725 306f67 Delete type=0 #4
+2026/02/22-16:43:13.382 307580 Level-0 table #9: started
+2026/02/22-16:43:13.402 307580 Level-0 table #9: 67072 bytes OK
+2026/02/22-16:43:13.411 307580 Delete type=0 #6

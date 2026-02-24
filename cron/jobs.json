@@ -1,0 +1,137 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "65b8e8f6-6800-4f56-86d8-3d022f9971d8",
+      "name": "morning-briefing",
+      "description": "Check memory/tasks/ for urgent items and overnight sub-agent work. Send brief summary only if actionable (under 5 lines).",
+      "enabled": true,
+      "createdAtMs": 1771648663460,
+      "updatedAtMs": 1771882859648,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 * * 1-5",
+        "tz": "Australia/Sydney"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Heartbeat: Check memory/tasks/ for anything urgent. Review any overnight sub-agent work. Send Rob a brief summary ONLY if there is something actionable. Keep it under 5 lines. If nothing urgent, reply HEARTBEAT_OK.",
+        "model": "openrouter/openai/minimax-m2.5",
+        "timeoutSeconds": 120
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "last"
+      },
+      "state": {
+        "nextRunAtMs": 1771966800000,
+        "lastRunAtMs": 1771882859638,
+        "lastStatus": "error",
+        "lastDurationMs": 10,
+        "consecutiveErrors": 2,
+        "lastError": "model not allowed: openrouter/openai/minimax-m2.5"
+      }
+    },
+    {
+      "id": "0fba335b-2f73-4058-a372-0986a2ee4413",
+      "name": "weekly-review",
+      "description": "Compile weekly progress summary, check for stalled tasks, suggest top 3 priorities. Save to memory/logs/weekly-review.md and send to Rob.",
+      "enabled": true,
+      "createdAtMs": 1771648673030,
+      "updatedAtMs": 1771743600037,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 18 * * 0",
+        "tz": "Australia/Sydney"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Weekly Review: Compile a summary of this week's PropPath progress. Check memory/ for stalled tasks. Suggest top 3 priorities for next week. Save the full summary to memory/logs/weekly-review.md. Then send Rob a concise version.",
+        "model": "openrouter/openai/minimax-m2.5",
+        "timeoutSeconds": 180
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "last"
+      },
+      "state": {
+        "nextRunAtMs": 1772348400000,
+        "lastRunAtMs": 1771743600015,
+        "lastStatus": "error",
+        "lastDurationMs": 22,
+        "lastError": "model not allowed: openrouter/openai/minimax-m2.5",
+        "consecutiveErrors": 1
+      }
+    },
+    {
+      "id": "04eebb2f-20c6-4cc8-8dad-234966bb475c",
+      "name": "Morning Briefing",
+      "description": "Check memory/tasks/ for urgent items, review overnight sub-agent work, send brief summary ONLY if actionable. Max 5 lines.",
+      "enabled": true,
+      "createdAtMs": 1771648765019,
+      "updatedAtMs": 1771882859654,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 * * 1-5",
+        "tz": "Australia/Sydney"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Heartbeat morning briefing: Check memory/tasks/ for anything urgent. Review any overnight sub-agent work. If there is something actionable, send Rob a summary under 5 lines. If nothing is actionable, reply HEARTBEAT_OK.",
+        "model": "openrouter/openai/minimax-m2.5",
+        "timeoutSeconds": 120
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "last"
+      },
+      "state": {
+        "nextRunAtMs": 1771966800000,
+        "lastRunAtMs": 1771882859648,
+        "lastStatus": "error",
+        "lastDurationMs": 6,
+        "consecutiveErrors": 2,
+        "lastError": "model not allowed: openrouter/openai/minimax-m2.5"
+      }
+    },
+    {
+      "id": "85654d72-c3c0-439c-9a78-90543c2bba95",
+      "name": "Weekly Review",
+      "description": "Compile week's progress, check for stalled tasks in memory/, suggest top 3 priorities for next week. Save to memory/logs/weekly-review.md and send to Rob.",
+      "enabled": true,
+      "createdAtMs": 1771648773215,
+      "updatedAtMs": 1771743600038,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 18 * * 0",
+        "tz": "Australia/Sydney"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Weekly review: Compile a summary of this week's progress for PropPath. Check memory/ for stalled tasks. Suggest top 3 priorities for next week. Save the full summary to memory/logs/weekly-review.md and send Rob a concise version.",
+        "model": "openrouter/openai/minimax-m2.5",
+        "timeoutSeconds": 180
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "last"
+      },
+      "state": {
+        "nextRunAtMs": 1772348400000,
+        "lastRunAtMs": 1771743600037,
+        "lastStatus": "error",
+        "lastDurationMs": 1,
+        "lastError": "model not allowed: openrouter/openai/minimax-m2.5",
+        "consecutiveErrors": 1
+      }
+    }
+  ]
+}

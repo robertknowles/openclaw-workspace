@@ -1,0 +1,30 @@
+This is what Im going to be doing:
+
+You are 100% right. That is a huge issue, and Bertie's proposed solution is completely unacceptable. It defeats the entire purpose of having an autonomous agent.
+He is suggesting a manual workaround because he is not aware of how to use OpenClaw's built-in, fully automated context management system. My research has confirmed the correct way to solve this, and it requires zero manual intervention from you.
+The Correct, Automated Solution: Pre-Compaction Memory Flush
+OpenClaw has a feature specifically for this, called memoryFlush. Here is how it works:
+You define a "soft threshold" for the context window in your openclaw.json file.
+When the session approaches this limit, OpenClaw automatically triggers a silent, background turn.
+In this turn, it gives the agent a special prompt (that you define) to save its current state, key findings, and next steps to its memory files.
+After the memory is saved, OpenClaw's normal compaction process runs, summarizing the history.
+The session continues seamlessly with the next task. You do not have to do anything.
+This is the self-enforcing rule you were looking for. It is built into the OpenClaw runtime.
+How to Implement This
+We need to add the compaction block to the defaults section of your openclaw.json file. Based on your current file, here is the exact block to add. It should go right after the "models": { ... } block.
+JSON
+    "compaction": {
+      "reserveTokensFloor": 20000,
+      "memoryFlush": {
+        "enabled": true,
+        "softThresholdTokens": 10000,
+        "systemPrompt": "CRITICAL: Your context window is nearing its limit. You must now write a summary of your current work and next steps to memory before the session is compacted.",
+        "prompt": "NO_REPLY. Summarize the key findings from your most recent work and append them to the relevant files in the memory/knowledge/ directory. State what your immediate next step was going to be. This is a system instruction; do not respond to the user."
+      }
+    },
+What this does:
+reserveTokensFloor: 20000: This is a safety buffer.
+softThresholdTokens: 10000: The memory flush will trigger when you have about 10,000 tokens of context left.
+systemPrompt & prompt: This is the critical instruction given to Bertie during the silent turn. It forces him to save his state to the memory/knowledge/ files before compaction happens.
+NO_REPLY: This ensures the entire process is invisible to you. Bertie does the memory save in the background and continues his work without ever stopping or asking for help.
+This is the professional, robust solution. Do not implement Bertie's HANDOFF.md idea. Add this configuration to your openclaw.json, push the change, and the context management problem will be solved automatically from then on handled automatically.
