@@ -23,7 +23,7 @@ This is the single most important statement for calibrating any audit of PropPat
 - Validation question: **"Is the end-state realistic? Are the assumptions credible?"**
 - Weakness: assumes the future plays out as modelled. Real decisions (which deal next, serviceability constraints, market shifts) are abstracted away.
 
-### Model B: Incremental, BA-Guided (InvestorKit)
+### Model B: Incremental, BA-Guided (Roadmap Lite)
 - BA works with client one property at a time
 - Each acquisition decision is made based on the client's *current* financial position
 - After each purchase: review actual performance, reassess serviceability, decide on next move

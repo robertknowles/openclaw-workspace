@@ -1,77 +1,126 @@
 # HANDOFF.md — Session State Save
-*Saved: Feb 2026 — Research phase COMPLETE*
+*Saved: Session ending after UI audit + competitive research*
 
 ---
 
-## Status: Research Phase Done ✅
-
-All research has been consolidated. The master document is:
-**`memory/knowledge/MASTER-RESEARCH-SUMMARY.md`** — start here next session.
+## Status: Research Phase Complete ✅ | No Code Changes Made
 
 ---
 
-## What Was Completed (Full Research Phase)
+## What Was Completed This Session
 
-### Files Written (All Committed to Git)
+### 1. PropPath Dashboard — Full UI Map
+- **12 screenshots** reviewed from Rob (8 dashboard + 4 property timeline)
+- Every screen mapped to its source code file
+- File: `memory/knowledge/proppath-ui-map.md`
+- Screenshots saved: `memory/screenshots/proppath-dashboard/` (01–12)
+
+### 2. Roadmap Lite — Competitive Analysis
+- **6 screenshots** reviewed from Rob
+- Full breakdown of competitor metrics, defaults, and gaps
+- File: `memory/knowledge/roadmap-lite-competitive-analysis.md`
+- Screenshots saved: `memory/screenshots/roadmap-lite/` (01–06)
+
+### 3. Codebase Files Read This Session
+| File | Purpose |
+|------|---------|
+| `src/components/ClientDetailsCard.tsx` | Client inputs panel |
+| `src/components/BorrowingCalculatorModal.tsx` | Borrowing calculator modal |
+| `src/components/InvestmentTimeline.tsx` | Main timeline + charts |
+| `src/components/RetirementSnapshot.tsx` | Retirement scenario sliders |
+| `src/components/PropertyBlocksPanel.tsx` | Left rail property cards |
+| `src/components/AddToTimelineModal.tsx` | Add property/event modal |
+| `src/components/CustomBlockModal.tsx` | Custom property creation |
+| `src/components/PropertyDetailModal.tsx` | Per-property performance modal |
+| `src/utils/guardrailValidator.ts` | 3 guardrail tests (deposit/borrowing/serviceability) |
+| `src/utils/calculateBorrowingCapacity.ts` | Borrowing capacity formula |
+| `src/utils/metricsCalculator.ts` | Growth + portfolio calculations |
+| `src/data/property-defaults.json` | All property type defaults |
+
+---
+
+## Key Research Findings
+
+### PropPath vs Roadmap Lite — Where PropPath Wins
+- Scenario A vs B comparison (Roadmap Lite has nothing)
+- Break-even line on cashflow chart (RL doesn't have it)
+- Property type variety + per-property performance modal
+- Events system (income, life, market events)
+- Overall presentation quality — better for client-facing use
+- More conservative growth assumptions (actually more defensible)
+
+### Where Roadmap Lite Beats PropPath (Gaps to Fix)
+1. **DTI cap** — RL labels "lower of Serviceability or 6x DTI" prominently. PropPath has no DTI check.
+2. **LVR default** — RL uses 20% deposit (80% LVR). PropPath uses 12% deposit (88% LVR).
+3. **Borrowing capacity model** — RL calculates from income/expenses/dependents. PropPath reverses from repayment amount only.
+4. **"Plan Feasible" banner** — RL has clear ✅/❌ at top of dashboard. PropPath's guardrails are buried.
+5. **Vacancy rate** — Both are 0% (both wrong). Industry standard is 2-4%.
+
+### Growth Rate Finding (Important)
+- Roadmap Lite MODERATE = 15% Years 1-4, then 10% forever (aggressive)
+- PropPath HIGH = 12.5% → 10% → 7.5% → 6% (tiered down, more conservative)
+- PropPath numbers are more defensible — this is a selling point
+
+### Competitive Landscape Clarification
+- **Roadmap Lite** = internal lead gen tool for The Investors Agency. Not a standalone product.
+- **Gameplans** = proven standalone business but expensive + requires consultants to deploy.
+- **PropPath gap** = self-serve, BA-owned, Gameplans-level output without the consultant dependency.
+
+---
+
+## Product Strategy Discussion (Key Points)
+- Rob confirmed: BAs build the plan, then present finished product to client. BA is the user, not the client.
+- Inputs being prominent makes sense — BA needs to tweak in real time during pitch.
+- "Next Buy Window" feature suggested: surface the AVAIL row as a proactive callout ("Next purchase window: 2027"). Retention play for BAs. Rob agreed this is valid.
+- Retirement Scenario output agreed to be a data table when it should feel like a moment.
+- Growth assumption visibility: should be a prominent toggle (Conservative/Moderate/Aggressive) not buried in property modal.
+
+---
+
+## Files Written This Session
 | File | Contents |
 |------|----------|
-| `memory/knowledge/MASTER-RESEARCH-SUMMARY.md` | ⭐ Full consolidated research — 10 sections, read this first |
-| `memory/knowledge/proppath-feature-map.md` | Full PropPath feature map, Tier 1–4, prioritised |
-| `memory/knowledge/proppath-model-statement.md` | Core product calibration — incremental vs simulation-first |
-| `memory/knowledge/competitors/05-investorkit.md` | InvestorKit full profile — business, team, FAQ, framework, cases |
-| `memory/knowledge/property-investment/07-investorkit-pure-deep-dive.md` | IK pure deep dive — no PropPath lens |
-| `memory/knowledge/property-investment/06-investorkit-vs-gameplans-model.md` | IK vs Gameplans model comparison |
-| `memory/knowledge/property-investment/04b-aps-deep-dive.md` | APS + School of Property — Trident Formula, curriculum |
-| `memory/knowledge/property-investment/08-property-nerds-episodes.md` | IK podcast episode archive + client pain point map |
+| `memory/knowledge/proppath-ui-map.md` | Every UI screen → code file mapping with all values from screenshots |
+| `memory/knowledge/roadmap-lite-competitive-analysis.md` | Full Roadmap Lite analysis from 6 screenshots |
+| `memory/screenshots/proppath-dashboard/` | 12 PropPath screenshots saved and named |
+| `memory/screenshots/roadmap-lite/` | 6 Roadmap Lite screenshots saved and named |
 
 ---
 
-## Key Findings (TL;DR)
-
-### The Problem
-BAs use Gameplans in live sessions to show portfolio plans. After the session, the plan disappears. Clients have no ongoing visibility. No living tool exists that keeps the plan alive between purchases.
-
-### The Product
-**PropPath = living portfolio roadmap.** BA builds it, client views it ongoing. Updates with reality, not just projections. Alerts both parties when it's time to buy again.
-
-### The Model
-PropPath is **incremental, not simulation-first** (aligned to InvestorKit, not Gameplans).
-
-### The Target Customer
-**InvestorKit is the ideal first customer.** They already believe in portfolio planning, use Gameplans, are scaling fast ($15M → $25M), and have the exact pain PropPath solves.
-
-### The 6 MVP Features
-1. Portfolio Roadmap Builder
-2. Goal Reverse-Engineering Engine
-3. Current Portfolio Dashboard
-4. Equity Trigger Alerts ⭐ (most valuable)
-5. Milestone Tracker
-6. Dual BA/Client Portal
-
-### The Positioning
-- Don't compete WITH Gameplans (different job). Compete for the GAP after Gameplans.
-- Headline: **"Your portfolio plan, alive."**
-- Problem: "BAs close clients with a plan. After the session, it disappears. PropPath keeps it alive."
+## Confirmed Red Items (From Audit — Not Yet Fixed, Rob Not Ready to Fix)
+1. **Vacancy rate = 0%** on most property types in `property-defaults.json`
+2. **No APRA 3% serviceability buffer** in `calculateBorrowingCapacity.ts`
+3. **Borrowing capacity stub** — `calculateUpdatedBorrowingCapacity` returns base unchanged
+4. **No DTI check** in `guardrailValidator.ts`
+5. **88% LVR default** across most property types → should be 80%
+6. **Existing portfolio growth hardcoded at 3%** in `metricsCalculator.ts` → should be 5-6%
 
 ---
 
-## Next Actions (Pick Up Here Next Session)
+## Next Actions (When Rob Is Ready)
 
-### Option A — Product Definition
-Define the PropPath MVP in detail: user flows, data model, key screens. Start turning the feature map into a spec.
+### Research Continuation
+- Rob wants to continue research mode — not implementing fixes yet
+- Outstanding question: where do the Add-to-Timeline modal display prices come from? ($400k for Units vs $350k in JSON)
+- Consider: deeper analysis of useAffordabilityCalculator.ts to understand borrowing capacity cascade
 
-### Option B — Knock Off Open Questions
-- What does Gameplans actually look like? (get access or screenshots)
-- What are the other top BAs using? (Metropole, Empower Wealth, Cohen Handler)
-- What is PropPath's pricing model?
+### When Ready to Fix (Priority Order)
+1. Add DTI check (6x) to `guardrailValidator.ts`
+2. Fix LVR defaults 88% → 80% in `property-defaults.json`
+3. Fix vacancy rates (2% minimum) in `property-defaults.json`
+4. Add APRA 3% buffer to `calculateBorrowingCapacity.ts`
+5. Fix borrowing capacity stub in metricsCalculator
+6. "Plan Feasible" banner (UI only, 1 hour)
 
-### Option C — Go-To-Market
-- Who are the 10 best BAs to pitch first?
-- What does the PropPath demo/sales motion look like?
-- Draft the IK outreach pitch
+### UI Improvements Discussed (Not Prioritised Yet)
+- Retirement Scenario — make it feel like a moment, not a data grid
+- Growth assumption visibility — prominent Conservative/Moderate/Aggressive toggle
+- "Next Buy Window" callout from AVAIL row data
+- Borrowing calculator → connect result back to main dashboard
 
 ---
 
 ## Git Status
-All files committed to main. No pending changes.
-Last commit: "MASTER-RESEARCH-SUMMARY.md — research phase complete"
+- No code changes this session
+- Research files written to workspace (not yet committed)
+- `ignito-project-kit` remains local only
