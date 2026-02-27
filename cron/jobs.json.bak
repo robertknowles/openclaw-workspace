@@ -7,7 +7,7 @@
       "description": "Check memory/tasks/ for urgent items and overnight sub-agent work. Send brief summary only if actionable (under 5 lines).",
       "enabled": true,
       "createdAtMs": 1771648663460,
-      "updatedAtMs": 1771882859648,
+      "updatedAtMs": 1772140151107,
       "schedule": {
         "kind": "cron",
         "expr": "0 8 * * 1-5",
@@ -26,11 +26,13 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1771966800000,
-        "lastRunAtMs": 1771882859638,
+        "nextRunAtMs": 1772398800000,
+        "lastRunAtMs": 1772140151052,
         "lastStatus": "error",
-        "lastDurationMs": 10,
-        "consecutiveErrors": 2,
+        "lastDurationMs": 55,
+        "consecutiveErrors": 5,
+        "lastRunStatus": "error",
+        "lastDeliveryStatus": "unknown",
         "lastError": "model not allowed: openrouter/openai/minimax-m2.5"
       }
     },
@@ -73,7 +75,7 @@
       "description": "Check memory/tasks/ for urgent items, review overnight sub-agent work, send brief summary ONLY if actionable. Max 5 lines.",
       "enabled": true,
       "createdAtMs": 1771648765019,
-      "updatedAtMs": 1771882859654,
+      "updatedAtMs": 1772140151109,
       "schedule": {
         "kind": "cron",
         "expr": "0 8 * * 1-5",
@@ -92,11 +94,13 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1771966800000,
-        "lastRunAtMs": 1771882859648,
+        "nextRunAtMs": 1772398800000,
+        "lastRunAtMs": 1772140151107,
         "lastStatus": "error",
-        "lastDurationMs": 6,
-        "consecutiveErrors": 2,
+        "lastDurationMs": 2,
+        "consecutiveErrors": 5,
+        "lastRunStatus": "error",
+        "lastDeliveryStatus": "unknown",
         "lastError": "model not allowed: openrouter/openai/minimax-m2.5"
       }
     },

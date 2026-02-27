@@ -1,0 +1,152 @@
+Bertie
+APP
+ — 7:01 PM
+Connection error.
+rob — 7:01 PM
+Connection error
+Bertie
+APP
+ — 7:02 PM
+You're right on 1 and 2 — I modelled the wrong user. I was imagining a client sitting at the keyboard. The BA builds the plan, then presents a finished story. That changes the critique completely. My bad.
+
+The inputs being prominent makes total sense for the BA workflow — they need to tweak in real time when a client pushes back. "You wanted a house? Let me change that right now and show you why the unit wins on every metric." That's actually a powerful sales move and the tool supports it well.
+
+Standing my ground on one thing you didn't rebut: "Next Buy Window." Even in the BA-led workflow, the annual AVAIL row is sitting right there and nobody's surfacing it as an insight. A callout that says "Next purchase window: 2027" gives the BA a reason to call the client back. That's pipeline for the BA, not just planning. Worth 2 hours of dev time.
+
+Fully defer on the rest. Ready to move — where do you want to start? Retirement snapshot UI, numbers audit, or the borrowing calculator dead-end?
+rob — 7:04 PM
+Here is roadmap lite. I was very pleased with how similar are products are- because they are actually from the industry. 
+I dont love there output- its not that clear.
+But anyway, we are looking at metrics, etc to try audit against ours
+Make notes and save
+Image
+
+Image
+
+Image
+
+Image
+
+Image
+
+Image
+
+Bertie
+APP
+ — 7:05 PM
+Connection error.
+rob — 7:06 PM
+Connection error.
+Bertie
+APP
+ — 7:08 PM
+Got all 6. Reading carefully now — there's some really important stuff here for the numbers audit. Saving everything.
+rob — 7:10 PM
+By the way. This isnt necessarily a proven product. Its a tool that this Investor Agency uses for to capture leads for there agency. Gameplans is a legit standalone business. Just a slightly different model
+Bertie
+APP
+ — 7:11 PM
+Connection error.
+rob — 7:11 PM
+And gameplans is proven- but complex in its quite different- its really expensive and they deploy themselves as consultants to work for BAs and use there complicated software
+So you can see the gap we are trying to slide into
+Bertie
+APP
+ — 7:11 PM
+Connection error.
+rob — 7:12 PM
+So many connection errors
+@Bertie
+Bertie
+APP
+ — 7:12 PM
+Crystal clear. The gap makes total sense now:
+
+Roadmap Lite — internal lead gen tool, not for sale, not proven as a product
+Gameplans — proven but expensive, complex, requires consultants to deploy it. BAs aren't buying software, they're buying a service wrapped around software
+PropPath — self-serve, BA-owned, no consultant needed, affordable
+
+You're going after BAs who want Gameplans-level output but can't justify the cost or the dependency on someone else running it for them. That's a real gap and it's the right one.
+
+The implication for the fixes is also clearer now: PropPath doesn't need to out-feature Gameplans. It needs to be credible enough that a BA feels confident presenting it to a client without a consultant in the room. That's why the financial rigor gaps (DTI, LVR, vacancy) matter so much — if a client asks "is this realistic?" the BA needs to be able to say yes with confidence.
+
+Ready to start on the four fixes whenever you are. Want to go one at a time so you can test each one, or should I do all four in one pass?
+Still here, getting everything. Discord is just being flaky on your end — all your messages are arriving fine.
+
+To confirm where we landed: ready to execute the four fixes. One at a time or all in one pass — your call.
+rob — 7:14 PM
+I dont want to implement any fixes. I am just trying research with you. How did you go saving the investor kit details and screenshots?
+Bertie
+APP
+ — 7:14 PM
+Connection error.
+rob — 7:15 PM
+I dont want to implement any fixes. I am just trying research with you. How did you go saving the investor kit details and screenshots?
+Bertie
+APP
+ — 7:16 PM
+Connection error.
+rob — 7:18 PM
+I dont want to implement any fixes. I am just trying research with you. How did you go saving the investor kit details and screenshots?
+Bertie
+APP
+ — 7:18 PM
+Connection error.
+rob — 7:22 PM
+I dont want to implement any fixes. I am just trying research with you. How did you go saving the investor kit details and screenshots?
+Bertie
+APP
+ — 7:23 PM
+Connection error.
+rob — 7:28 PM
+Did you save the investorkit details and screenshots?
+@Bertie
+Bertie
+APP
+ — 7:31 PM
+Saved so far this session:
+✅ roadmap-lite-competitive-analysis.md — full competitor breakdown from your 6 screenshots
+
+What I didn't save yet — the PropPath UI map from your first 12 screenshots. I read all the code files but never wrote the document. Doing that now.
+rob — 7:32 PM
+You did Im pretty sure? I thought I read the PropPath one. And your saying you did the Roadmap one. Do you want to save the images or dont need them?
+Bertie
+APP
+ — 7:32 PM
+Connection error.
+rob — 7:33 PM
+Please save everything. Create a handover. we will start a new session
+Bertie
+APP
+ — 7:33 PM
+Connection error.
+rob — 7:33 PM
+@Bertie Please save everything. Create a handover. we will start a new session
+Bertie
+APP
+ — 7:35 PM
+Copying screenshots and writing the handoff now.
+rob — 7:37 PM
+Ready?
+Bertie
+APP
+ — 7:37 PM
+Connection error.
+rob — 7:38 PM
+Handover ready?
+Bertie
+APP
+ — 7:39 PM
+Writing it now.
+All done. Here's what's saved:
+
+Documents:
+proppath-ui-map.md — every screen to code file
+roadmap-lite-competitive-analysis.md — full competitor breakdown
+HANDOFF.md — full session state for next time
+
+Screenshots:
+12 PropPath screenshots — named and organised
+6 Roadmap Lite screenshots — named and organised
+
+Start a /new session and I'll pick up exactly where we left off. Good session Rob.

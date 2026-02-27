@@ -67,7 +67,7 @@
   "channels": {
     "discord": {
       "enabled": true,
-      "token": "MTQ3MjQzMjUxMjU5OTg1NTI5NQ.GQtqr3.-AjIKX5UHuIUOsSRP1q4aPSp1d8RDLON0R5YHk",
+      "token": "MTQ3MjQzMjUxMjU5OTg1NTI5NQ.GRYIax.q79RCWae4xYhTnPO8e6jciiGkEuf2Ncdn0Cjk8",
       "groupPolicy": "allowlist",
       "guilds": {
         "1472448860650733731": {

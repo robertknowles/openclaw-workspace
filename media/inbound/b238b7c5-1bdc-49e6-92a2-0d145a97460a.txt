@@ -1,0 +1,56 @@
+08:58:29 info bonjour: advertised gateway fqdn=Robert’s MacBook Pro (OpenClaw)._openclaw-gw._tcp.local. host=openclaw.local. port=18789 state=announcing
+08:58:29 info gateway/channels/discord {"subsystem":"gateway/channels/discord"} [default] Discord Message Content Intent is limited; bots under 100 servers can use it without verification.
+08:58:29 info gateway/channels/discord {"subsystem":"gateway/channels/discord"} [default] starting provider (@Bertie)
+08:58:30 info gateway/channels/discord {"subsystem":"gateway/channels/discord"} discord channels resolved: guild:1472448860650733731→1472448860650733731
+08:58:30 info gateway/channels/discord {"subsystem":"gateway/channels/discord"} discord channel users resolved: 547887855729639434→547887855729639434
+08:58:30 debug skills {"subsystem":"skills"} {"rawName":"coding-agent","sanitized":"/coding_agent"} Sanitized skill command name "coding-agent" to "/coding_agent".
+08:58:30 debug skills {"subsystem":"skills"} {"rawName":"gh-issues","sanitized":"/gh_issues"} Sanitized skill command name "gh-issues" to "/gh_issues".
+08:58:30 debug skills {"subsystem":"skills"} {"rawName":"skill-creator","sanitized":"/skill_creator"} Sanitized skill command name "skill-creator" to "/skill_creator".
+08:58:30 debug skills {"subsystem":"skills"} {"rawName":"things-mac","sanitized":"/things_mac"} Sanitized skill command name "things-mac" to "/things_mac".
+08:58:30 debug skills {"subsystem":"skills"} {"rawName":"Agent Browser","sanitized":"/agent_browser"} Sanitized skill command name "Agent Browser" to "/agent_browser".
+08:58:30 debug skills {"subsystem":"skills"} {"rawName":"prompt-guard","sanitized":"/prompt_guard"} Sanitized skill command name "prompt-guard" to "/prompt_guard".
+08:58:30 debug skills {"subsystem":"skills"} {"rawName":"sheet-tracker","sanitized":"/sheet_tracker"} Sanitized skill command name "sheet-tracker" to "/sheet_tracker".
+08:58:31 info gateway/channels/discord {"subsystem":"gateway/channels/discord"} logged in to discord as 1472432512599855295
+08:58:42 info gateway/ws {"subsystem":"gateway/ws"} webchat connected conn=a836f760-0e0b-4984-95be-77742f3f7b6a remote=127.0.0.1 client=openclaw-control-ui webchat vdev
+08:58:42 info gateway/ws {"subsystem":"gateway/ws"} ⇄ res ✓ chat.history 128ms conn=a836f760…7b6a id=90820e19…30cb
+08:58:43 debug diagnostic {"subsystem":"diagnostic"} lane enqueue: lane=session:agent:main:discord:channel:1472448860650733734 queueSize=1
+08:58:43 debug diagnostic {"subsystem":"diagnostic"} lane dequeue: lane=session:agent:main:discord:channel:1472448860650733734 waitMs=6 queueSize=0
+08:58:43 debug diagnostic {"subsystem":"diagnostic"} lane enqueue: lane=main queueSize=1
+08:58:43 debug diagnostic {"subsystem":"diagnostic"} lane dequeue: lane=main waitMs=3 queueSize=0
+08:58:43 debug agent/embedded {"subsystem":"agent/embedded"} embedded run start: runId=83b856f1-c4d9-42c4-8d20-4f43dcd22a81 sessionId=fbc5a820-c20b-4cf3-bb38-7b59f1d38149 provider=openrouter model=anthropic/claude-sonnet-4.6 thinking=low messageChannel=discord
+08:58:43 debug agent/embedded {"subsystem":"agent/embedded"} applying OpenRouter app attribution headers for openrouter/anthropic/claude-sonnet-4.6
+08:58:43 debug diagnostic {"subsystem":"diagnostic"} run registered: sessionId=fbc5a820-c20b-4cf3-bb38-7b59f1d38149 totalActive=1
+08:58:43 debug agent/embedded {"subsystem":"agent/embedded"} embedded run prompt start: runId=83b856f1-c4d9-42c4-8d20-4f43dcd22a81 sessionId=fbc5a820-c20b-4cf3-bb38-7b59f1d38149
+08:58:43 debug agent/embedded {"subsystem":"agent/embedded"} embedded run agent start: runId=83b856f1-c4d9-42c4-8d20-4f43dcd22a81
+08:58:46 warn agent/embedded {"subsystem":"agent/embedded"} embedded run agent end: runId=83b856f1-c4d9-42c4-8d20-4f43dcd22a81 isError=true error=Connection error.
+08:58:48 debug agent/embedded {"subsystem":"agent/embedded"} embedded run agent start: runId=83b856f1-c4d9-42c4-8d20-4f43dcd22a81
+08:58:53 debug agent/embedded {"subsystem":"agent/embedded"} embedded run tool start: runId=83b856f1-c4d9-42c4-8d20-4f43dcd22a81 tool=exec toolCallId=toolu_01FKCiM4Hr59pTeHPcJfwZHy
+08:58:53 debug agent/embedded {"subsystem":"agent/embedded"} embedded run prompt end: runId=83b856f1-c4d9-42c4-8d20-4f43dcd22a81 sessionId=fbc5a820-c20b-4cf3-bb38-7b59f1d38149 durationMs=9437
+08:58:53 debug diagnostic {"subsystem":"diagnostic"} run cleared: sessionId=fbc5a820-c20b-4cf3-bb38-7b59f1d38149 totalActive=0
+08:58:59 info gateway/ws {"subsystem":"gateway/ws"} ⇄ res ✓ config.get 574ms conn=6b4f1aad…0765 id=1a01d822…89b7
+08:59:06 debug agent/embedded {"subsystem":"agent/embedded"} embedded run done: runId=83b856f1-c4d9-42c4-8d20-4f43dcd22a81 sessionId=fbc5a820-c20b-4cf3-bb38-7b59f1d38149 durationMs=23263 aborted=false
+08:59:06 debug diagnostic {"subsystem":"diagnostic"} lane task done: lane=main durationMs=23272 active=0 queued=0
+08:59:06 debug diagnostic {"subsystem":"diagnostic"} lane task done: lane=session:agent:main:discord:channel:1472448860650733734 durationMs=23282 active=0 queued=0
+08:59:28 debug cron {"module":"cron","storePath":"/Users/robertknowles/.openclaw/cron/jobs.json"} {"nextAt":1772053200000,"delayMs":60000,"clamped":true} cron: timer armed
+09:00:28 debug cron {"module":"cron","storePath":"/Users/robertknowles/.openclaw/cron/jobs.json"} {"nextAt":1772053200000,"delayMs":60000,"clamped":true} cron: timer armed
+09:00:30 debug diagnostic {"subsystem":"diagnostic"} lane enqueue: lane=session:agent:main:discord:channel:1472448860650733734 queueSize=1
+09:00:30 debug diagnostic {"subsystem":"diagnostic"} lane dequeue: lane=session:agent:main:discord:channel:1472448860650733734 waitMs=2 queueSize=0
+09:00:30 debug diagnostic {"subsystem":"diagnostic"} lane enqueue: lane=main queueSize=1
+09:00:30 debug diagnostic {"subsystem":"diagnostic"} lane dequeue: lane=main waitMs=2 queueSize=0
+09:00:30 debug agent/embedded {"subsystem":"agent/embedded"} embedded run start: runId=2624fb16-7788-4980-b244-0e2ecb5fc440 sessionId=fbc5a820-c20b-4cf3-bb38-7b59f1d38149 provider=openrouter model=anthropic/claude-sonnet-4.6 thinking=low messageChannel=discord
+09:00:30 debug agent/embedded {"subsystem":"agent/embedded"} applying OpenRouter app attribution headers for openrouter/anthropic/claude-sonnet-4.6
+09:00:30 debug diagnostic {"subsystem":"diagnostic"} run registered: sessionId=fbc5a820-c20b-4cf3-bb38-7b59f1d38149 totalActive=1
+09:00:30 debug agent/embedded {"subsystem":"agent/embedded"} embedded run prompt start: runId=2624fb16-7788-4980-b244-0e2ecb5fc440 sessionId=fbc5a820-c20b-4cf3-bb38-7b59f1d38149
+09:00:30 debug agent/embedded {"subsystem":"agent/embedded"} embedded run agent start: runId=2624fb16-7788-4980-b244-0e2ecb5fc440
+09:00:33 warn agent/embedded {"subsystem":"agent/embedded"} embedded run agent end: runId=2624fb16-7788-4980-b244-0e2ecb5fc440 isError=true error=Connection error.
+09:00:35 debug agent/embedded {"subsystem":"agent/embedded"} embedded run agent start: runId=2624fb16-7788-4980-b244-0e2ecb5fc440
+09:00:38 warn agent/embedded {"subsystem":"agent/embedded"} embedded run agent end: runId=2624fb16-7788-4980-b244-0e2ecb5fc440 isError=true error=Connection error.
+09:00:42 debug agent/embedded {"subsystem":"agent/embedded"} embedded run agent start: runId=2624fb16-7788-4980-b244-0e2ecb5fc440
+09:00:44 warn agent/embedded {"subsystem":"agent/embedded"} embedded run agent end: runId=2624fb16-7788-4980-b244-0e2ecb5fc440 isError=true error=Connection error.
+09:00:52 debug agent/embedded {"subsystem":"agent/embedded"} embedded run agent start: runId=2624fb16-7788-4980-b244-0e2ecb5fc440
+09:00:54 warn agent/embedded {"subsystem":"agent/embedded"} embedded run agent end: runId=2624fb16-7788-4980-b244-0e2ecb5fc440 isError=true error=Connection error.
+09:00:54 debug agent/embedded {"subsystem":"agent/embedded"} embedded run prompt end: runId=2624fb16-7788-4980-b244-0e2ecb5fc440 sessionId=fbc5a820-c20b-4cf3-bb38-7b59f1d38149 durationMs=23740
+09:00:54 debug diagnostic {"subsystem":"diagnostic"} run cleared: sessionId=fbc5a820-c20b-4cf3-bb38-7b59f1d38149 totalActive=0
+09:00:54 debug agent/embedded {"subsystem":"agent/embedded"} embedded run done: runId=2624fb16-7788-4980-b244-0e2ecb5fc440 sessionId=fbc5a820-c20b-4cf3-bb38-7b59f1d38149 durationMs=23808 aborted=false
+09:00:54 debug diagnostic {"subsystem":"diagnostic"} lane task done: lane=main durationMs=23812 active=0 queued=0
+09:00:54 debug diagnostic {"subsystem":"diagnostic"} lane task done: lane=session:agent:main:discord:channel:1472448860650733734 durationMs=23816 active=0 queued=0
